@@ -1,9 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { ComposableMap, Geographies, Geography, Annotation, ZoomableGroup} from "react-simple-maps";
+import { geoPatterson } from "d3-geo-projection";
 
 const geoURL = "https://raw.githubusercontent.com/lotusms/world-map-data/main/world.json";
 
-const App = () => {
+const width = 800;
+const height = 600;
+
+const projection = geoPatterson()
+  .translate([width / 2.2, height / 2.7])
+  .scale(98);
+
+
+const Map = () => {
   const [countries, setCountries] =  useState([])
   const [position, setPosition] = useState({coordinates:[0, 0], zoom: 1})
 
@@ -38,16 +47,7 @@ const App = () => {
 
   return (
     <div className="Map">
-      <div style={{width:"100vw", height:"50vw"}}>
-        <ComposableMap
-          projectionConfig={{
-            scale: 100,
-            center: [50, 5]
-          }}
-          style={{
-            width: "100%",
-            height: "auto"
-          }}>
+        <ComposableMap width={width} height={height} projection={projection}>
             <ZoomableGroup 
               zoom={position.zoom}
               centre={position.coordinates}
@@ -68,13 +68,9 @@ const App = () => {
               </Geographies>  
 
             </ZoomableGroup>
-          }
-
         </ComposableMap>
-
       </div>
-    </div>
   );
 }
 
-export default App;
+export default Map;
