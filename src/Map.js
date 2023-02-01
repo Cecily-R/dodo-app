@@ -1,18 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { ComposableMap, Geographies, Geography, Annotation, ZoomableGroup} from "react-simple-maps";
 import { geoPatterson } from "d3-geo-projection";
+import Navbar from './navBar.js';
+
 
 const geoURL = "https://raw.githubusercontent.com/lotusms/world-map-data/main/world.json";
 
 const width = 800;
-const height = 600;
+const height = 500;
 
 const projection = geoPatterson()
-  .translate([width / 2.2, height / 2.7])
-  .scale(98);
+  .translate([width / 2, height / 1.75])
+  .scale(100);
 
 
-const Map = () => {
+const Map = ({setTooltipContent}) => {
   const [countries, setCountries] =  useState([])
   const [position, setPosition] = useState({coordinates:[0, 0], zoom: 1})
 
@@ -47,7 +49,7 @@ const Map = () => {
 
   return (
     <div className="Map">
-        <ComposableMap width={width} height={height} projection={projection}>
+        <ComposableMap width={width} height={height} projection={projection} position="relative">
             <ZoomableGroup 
               zoom={position.zoom}
               centre={position.coordinates}
@@ -56,12 +58,37 @@ const Map = () => {
               <Geographies geography={geoURL}>
                 {({geographies}) =>
                   geographies.map((geo, index) => {
-                    const isos = countries.find((s) => s.ISO3 === geo.id)
                     return (
                       <Geography
                       key={index}
                       geography={geo}
-                      fill="#23cf8c"/>
+                      onMouseEnter={() => {                  
+                        const NAME  = geo.properties.name;
+                        console.log(`${NAME}`)
+                        setTooltipContent(`${NAME}`);
+                        <p id="my-element" data-tooltip-content="hello world">
+                          Tooltip
+                        </p>
+                      }}
+                      onMouseLeave={() => {
+                        setTooltipContent("");
+                      }}
+                      style={{
+                        
+                        hover: {
+                          fill: "purple",
+                          outline: "none"
+                        },
+                        pressed: {
+                          fill: "purple",
+                          outline: "none"
+                        },
+                        default: {
+                            outline: 'none'
+                        }
+                        
+                      }}
+                      />
                     )
                   })
                 }

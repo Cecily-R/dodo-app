@@ -1,12 +1,18 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&family=Rubik+Gemstones&family=Sanchez:ital@0;1&display=swap');
+
+
+* {
+  background-color: #20a3d9; 
+}
+
+.map {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-size: calc(10px + 2vmin);
-  background-color: #20a3d9;
-  color: white;
-  padding: 25px;
+  fill: #23cf8c;
+  outline: #ffc1f4;
+}
+
+.title {
+  font-family: "Raleway";
+  align-items: center;
+  font-size: 0.9em;
 }
