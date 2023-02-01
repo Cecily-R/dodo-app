@@ -1,25 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
+<<<<<<< HEAD
+import Map from './Map.js';
+import Navbar from './navBar.js';
+import React, {useState} from 'react';
+import { Tooltip as ReactTooltip } from "react-tooltip";
+import 'react-tooltip/dist/react-tooltip.css' //needed?
+=======
+import React, { useState, useEffect } from "react";
+>>>>>>> b2cc1d1 (Added JSON db containing list of countries and fetched in App.js file)
 
 function App() {
+  const [content, setContent] = useState("");
+
+<<<<<<< HEAD
+  return (
+    <div>
+      <div className="navbar">
+        <Navbar />
+      </div>
+      <div className="map">
+      <ReactTooltip anchorId="my-element">{content}</ReactTooltip>
+      {/*<p id="my-element" data-tooltip-content={content}>Tooltip</p>*/}
+          <Map setTooltipContent={setContent}/>
+      </div>
+=======
+const App = () => {
+  const [countries, setCountries] =  useState([])
+
+  const getData = () => {
+    fetch('http://localhost:3001/countries', {
+      header:{
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+      }
+    })
+    .then((res) => res.json())
+    .then((data) => {setCountries(data)})
+  }
+
+  useEffect(() => {
+    getData()
+  }, [])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+>>>>>>> b2cc1d1 (Added JSON db containing list of countries and fetched in App.js file)
     </div>
   );
-}
+};
 
 export default App;
