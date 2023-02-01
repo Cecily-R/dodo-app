@@ -1,51 +1,29 @@
-<<<<<<< HEAD
 import Map from './Map.js';
 import Navbar from './navBar.js';
+import Sidebar from './sideBar.js'
 import React, {useState} from 'react';
-import { Tooltip as ReactTooltip } from "react-tooltip";
+import { Tooltip as ReactTooltip } from 'react-tooltip';
 import 'react-tooltip/dist/react-tooltip.css' //needed?
-=======
-import React, { useState, useEffect } from "react";
->>>>>>> b2cc1d1 (Added JSON db containing list of countries and fetched in App.js file)
 
 function App() {
   const [content, setContent] = useState("");
 
-<<<<<<< HEAD
   return (
-    <div>
-      <div className="navbar">
+    <>
+      <div className="navbar-wrapper">
         <Navbar />
       </div>
-      <div className="map">
-      <ReactTooltip anchorId="my-element">{content}</ReactTooltip>
-      {/*<p id="my-element" data-tooltip-content={content}>Tooltip</p>*/}
+      <div className="flex-container">
+        <div className="sidebar-wrapper">
+          <Sidebar country={content} />
+        </div>
+        <div className="map-wrapper">
+          <ReactTooltip anchorId="my-element">{content}</ReactTooltip>
+          {/*<p id="my-element" data-tooltip-content={content}>Tooltip</p>*/}
           <Map setTooltipContent={setContent}/>
+        </div>
       </div>
-=======
-const App = () => {
-  const [countries, setCountries] =  useState([])
-
-  const getData = () => {
-    fetch('http://localhost:3001/countries', {
-      header:{
-        'Content-Type': 'application/json',
-        'Accept': 'application/json',
-      }
-    })
-    .then((res) => res.json())
-    .then((data) => {setCountries(data)})
-  }
-
-  useEffect(() => {
-    getData()
-  }, [])
-
-  return (
-    <div className="App">
-      
->>>>>>> b2cc1d1 (Added JSON db containing list of countries and fetched in App.js file)
-    </div>
+    </>
   );
 };
 
