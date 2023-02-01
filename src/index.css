@@ -1,18 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&family=Rubik+Gemstones&family=Sanchez:ital@0;1&display=swap');
 
 
-* {
-  background-color: #20a3d9; 
+body {
+  background-color: #cedde3;
+  height: 100%;
 }
 
-.map {
+.flex-container {
+  display: flex;
+}
+
+.map-wrapper {
+  background-color: #20a3d9; 
+  width: 80%;
+  float: right;
+  position: relative;
   margin: 0;
   fill: #23cf8c;
   outline: #ffc1f4;
 }
 
-.title {
+.sidebar-wrapper {
+  background-color: #e3a45b; 
+  width: 20%;
+  height: relative;
+  position: relative;
+  float: left;
+  font-family: "Raleway";
+  font-size: 0.9em;
+}
+
+.navbar-wrapper {
   font-family: "Raleway";
   align-items: center;
   font-size: 0.9em;
+  position: relative;
 }
