@@ -16,21 +16,20 @@ const projection = geoPatterson()
 
 const Map = ({setTooltipContent}) => {
   const [countries, setCountries] =  useState([])
-  const [position, setPosition] = useState({coordinates:[0, 0], zoom: 1})
 
-  function handleZoomIn() {
-    if (position.zoom >= 4) return;
-    setPosition((pos) => ({ ...pos, zoom: pos.zoom * 2 }));
-  }
+  // function handleZoomIn() {
+  //   // if (position.zoom >= 4) return;
+  //   setPosition((pos) => ({ ...pos, zoom: pos.zoom * 2 }));
+  // }
 
-  function handleZoomOut() {
-    if (position.zoom <= 1) return;
-    setPosition((pos) => ({ ...pos, zoom: pos.zoom / 2 }));
-  }
+  // function handleZoomOut() {
+  //   if (position.zoom <= 1) return;
+  //   setPosition((pos) => ({ ...pos, zoom: pos.zoom / 2 }));
+  // }
 
-  function handleMoveEnd(position) {
-    setPosition(position);
-  }
+  // function handleMoveEnd(position) {
+  //   setPosition(position);
+  // }
 
   const getData = () => {
     fetch('http://localhost:3001/countries', {
@@ -50,11 +49,7 @@ const Map = ({setTooltipContent}) => {
   return (
     <div className="Map">
         <ComposableMap width={width} height={height} projection={projection} position="relative">
-            <ZoomableGroup 
-              zoom={position.zoom}
-              centre={position.coordinates}
-              onMoveEnd={handleMoveEnd}>
-
+            <ZoomableGroup center={[0, 0]} zoom={1}>
               <Geographies geography={geoURL}>
                 {({geographies}) =>
                   geographies.map((geo, index) => {
@@ -76,11 +71,11 @@ const Map = ({setTooltipContent}) => {
                       style={{
                         
                         hover: {
-                          fill: "purple",
+                          fill: "#d2c3ff",
                           outline: "none"
                         },
                         pressed: {
-                          fill: "purple",
+                          fill: "#d2c3ff",
                           outline: "none"
                         },
                         default: {
