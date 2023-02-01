@@ -71,7 +71,7 @@ const Map = ({setTooltipContent}) => {
                       style={{
                         
                         hover: {
-                          fill: "#d2c3ff",
+                          fill: "#32ff83",
                           outline: "none"
                         },
                         pressed: {
