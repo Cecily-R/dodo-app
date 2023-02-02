@@ -1,5 +1,5 @@
 require("jest-fetch-mock").enableMocks();
-const RedListClient = require("./lib/RedListClient")
+const RedListClient = require("../lib/RedListClient")
 
 describe("RedListClient", () => {
   describe("fetchSpeciesByCountry", () => {
@@ -7,7 +7,7 @@ describe("RedListClient", () => {
       fetch.resetMocks();
     });
 
-    it("fetches endangered species for Azerbaijan", () => {
+    it("fetches endangered species for Azerbaijan", (done) => {
       const client = new RedListClient ();
 
       fetch.mockResponseOnce(JSON.stringify({ 
@@ -26,8 +26,9 @@ describe("RedListClient", () => {
         expect(data.name).toEqual("Azerbaijan")
         expect(data.assoc_animals[0]).toEqual("Northern Goshawk")
         expect(data.assoc_animals[5]).toEqual("Redpoll")
-        expect(data.assoc_animals.length).toEqual(6)
-      })
+        expect(data.assoc_animals.length).toEqual(6);
+        done();
+      });
     });
   });
 });
