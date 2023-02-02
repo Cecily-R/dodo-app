@@ -25,9 +25,10 @@ h1 {
   background: var(--primary);
   border: 0;
   color: #12126d;
+  background-color: ffff; 
   padding: 10px;
   font-family: "Sanchez";
-  font-weight: 900;
+  size: 200px;
   border-radius: 4px;
   cursor: pointer;
 }
@@ -55,4 +56,5 @@ h1 {
   margin-bottom: 8px;
   padding: 1em;
   border-radius: 25px;
+  padding-left: 40px
 }

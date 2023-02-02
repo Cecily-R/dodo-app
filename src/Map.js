@@ -3,8 +3,8 @@ import { ComposableMap, Geographies, Geography, Annotation, ZoomableGroup, Marke
 import { geoPatterson } from "d3-geo-projection";
 import Navbar from './navBar.js';
 
-const geoURL = "https://raw.githubusercontent.com/lotusms/world-map-data/main/world.json";
-const geoURLCont = "https://raw.githubusercontent.com/deldersveld/topojson/master/world-continents.json";
+// const geoURL = "https://raw.githubusercontent.com/lotusms/world-map-data/main/world.json";
+const geoURL = "https://raw.githubusercontent.com/deldersveld/topojson/master/world-continents.json";
 
 const width = 800;
 const height = 500;
@@ -32,7 +32,12 @@ const Map = ({setTooltipContent}) => {
   }, [])
 
   const handleClick = (geo) => () => {
-    console.log(geo);
+    const CONTINENT  = geo.properties.continent;
+    console.log(`${CONTINENT}`)
+    setTooltipContent(`${CONTINENT}`);
+      <p id="my-element" data-tooltip-content="hello world">
+        Tooltip
+      </p>
   };
 
   return (
@@ -46,18 +51,18 @@ const Map = ({setTooltipContent}) => {
                       <Geography
                       key={index}
                       geography={geo}
-                      onClick={handleClick(geo.properties)}
-                      onMouseEnter={() => {                  
-                        const NAME  = geo.properties.name;
-                        console.log(`${NAME}`)
-                        setTooltipContent(`${NAME}`);
-                        <p id="my-element" data-tooltip-content="hello world">
-                          Tooltip
-                        </p>
-                      }}
-                      onMouseLeave={() => {
-                        setTooltipContent("");
-                      }}
+                      onClick={handleClick(geo)}
+                      // onMouseEnter={() => {                  
+                      //   const CONTINENT  = geo.properties.continent;
+                      //   console.log(`${CONTINENT}`)
+                      //   setTooltipContent(`${CONTINENT}`);
+                      //   <p id="my-element" data-tooltip-content="hello world">
+                      //     Tooltip
+                      //   </p>
+                      // }}
+                      // onMouseLeave={() => {
+                      //   setTooltipContent("");
+                      // }}
                       style={{
                         hover: {
                           fill: "#23cf8c",
