@@ -1,37 +1,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&family=Rubik+Gemstones&family=Sanchez:ital@0;1&display=swap');
 
-
 body {
-  background-color: #cedde3;
   height: 100%;
+  margin: 0;
+  background-color: #62e8ff;
 }
 
 .flex-container {
   display: flex;
 }
 
-.map-wrapper {
-  background-color: #20a3d9; 
-  width: 80%;
-  float: right;
-  position: relative;
+header {
+  padding-top: 10px;
+}
+
+h1 {
   margin: 0;
-  fill: #23cf8c;
+  text-align: center;
+  color: #12126d;
+  font-family: "Rubik Gemstones";
+}
+
+.navbar button {
+  background: var(--primary);
+  border: 0;
+  color: #12126d;
+  padding: 10px;
+  font-family: "Sanchez";
+  font-weight: 900;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+.map-wrapper {
+  width: 80%;
+  fill:#0e652b;
 }
 
 .sidebar-wrapper {
-  background-color: #e3a45b; 
+  background-color: #ffc47d; 
   width: 20%;
-  height: relative;
   position: relative;
   float: left;
-  font-family: "Raleway";
+  font-family: "Sanchez";
   font-size: 0.9em;
-}
-
-.navbar-wrapper {
-  font-family: "Raleway";
-  align-items: center;
-  font-size: 0.9em;
-  position: relative;
+  margin-left: 8px;
+  margin-bottom: 8px;
+  padding: 1em;
+  border-radius: 25px;
 }

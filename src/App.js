@@ -10,9 +10,8 @@ function App() {
 
   return (
     <>
-      <div className="navbar-wrapper">
-        <Navbar />
-      </div>
+    <div id='background'>
+      <Navbar />
       <div className="flex-container">
         <div className="sidebar-wrapper">
           <Sidebar country={content} />
@@ -21,6 +20,7 @@ function App() {
           <ReactTooltip anchorId="my-element">{content}</ReactTooltip>
           {/*<p id="my-element" data-tooltip-content={content}>Tooltip</p>*/}
           <Map setTooltipContent={setContent}/>
+        </div>
         </div>
       </div>
     </>

@@ -49,11 +49,11 @@ const Map = ({setTooltipContent}) => {
                       onClick={handleClick(geo.properties)}
                       style={{
                         hover: {
-                          fill: "#32ff83",
+                          fill: "#23cf8c",
                           outline: "none"
                         },
                         pressed: {
-                          fill: "#32ff83",
+                          fill: "#23cf8c",
                           outline: "none"
                         },
                         default: {
