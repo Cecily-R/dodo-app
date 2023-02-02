@@ -6,6 +6,16 @@ body {
   height: 100%;
 }
 
+.app {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  position:fixed;
+  top: 0;
+  left: 0;
+  cursor: url(newMouse.png), auto;
+}
+
 .flex-container {
   display: flex;
 }
@@ -18,6 +28,7 @@ body {
   margin: 0;
   fill: #23cf8c;
   outline: #ffc1f4;
+  cursor: url(newMous.png), auto;
 }
 
 .sidebar-wrapper {
