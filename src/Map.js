@@ -10,8 +10,8 @@ const width = 800;
 const height = 400;
 
 const projection = geoPatterson()
-  .translate([width / 2, height / 1.75])
-  .scale(100);
+  .translate([width / 2, height / 1.6])
+  .scale(127);
 
 const Map = ({setTooltipContent}) => {
   const [countries, setCountries] =  useState([])
@@ -43,7 +43,7 @@ const Map = ({setTooltipContent}) => {
   return (
     <div className="Map">
         <ComposableMap width={width} height={height} projection={projection} position="relative">
-            <ZoomableGroup center={[0, 0]} zoom={1.25}>
+            {/* <ZoomableGroup center={[0, 0]} zoom={1.25}> */}
               <Geographies geography={geoURL}>
                 {({geographies}) =>
                   geographies.map((geo, index) => {
@@ -81,7 +81,7 @@ const Map = ({setTooltipContent}) => {
                   })
                 }
               </Geographies> 
-            </ZoomableGroup>
+            {/* </ZoomableGroup> */}
         </ComposableMap>
       </div>
   );
