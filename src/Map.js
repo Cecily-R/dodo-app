@@ -7,7 +7,7 @@ import Navbar from './navBar.js';
 const geoURL = "https://raw.githubusercontent.com/deldersveld/topojson/master/world-continents.json";
 
 const width = 800;
-const height = 500;
+const height = 400;
 
 const projection = geoPatterson()
   .translate([width / 2, height / 1.75])
@@ -16,20 +16,20 @@ const projection = geoPatterson()
 const Map = ({setTooltipContent}) => {
   const [countries, setCountries] =  useState([])
 
-  const getData = () => {
-    fetch('http://localhost:3001/countries', {
-      header:{
-        'Content-Type': 'application/json',
-        'Accept': 'application/json',
-      }
-    })
-    .then((res) => res.json())
-    .then((data) => {setCountries(data)})
-  }
+  // const getData = () => {
+  //   fetch('http://localhost:3001/countries', {
+  //     header:{
+  //       'Content-Type': 'application/json',
+  //       'Accept': 'application/json',
+  //     }
+  //   })
+  //   .then((res) => res.json())
+  //   .then((data) => {setCountries(data)})
+  // }
  
-  useEffect(() => {
-    getData()
-  }, [])
+  // useEffect(() => {
+  //   getData()
+  // }, [])
 
   const handleClick = (geo) => () => {
     const CONTINENT  = geo.properties.continent;

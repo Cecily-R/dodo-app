@@ -5,7 +5,8 @@ const Navbar = () => {
       <nav className="navbar">
         <ul>
           <li>
-            <button>breaking news.</button >
+            <button className="breakingNewsButton">breaking news.</button >
+            <button className="resourcesButton">donate here.</button >
           </li>
         </ul>
       </nav>

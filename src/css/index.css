@@ -21,7 +21,19 @@ h1 {
   font-family: "Rubik Gemstones";
 }
 
-.navbar button {
+.navbar .breakingNewsButton {
+  background: var(--primary);
+  border: 0;
+  color: #12126d;
+  background-color: ffff; 
+  font-family: "Sanchez";
+  size: 200px;
+  border-radius: 4px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.navbar .resourcesButton {
   background: var(--primary);
   border: 0;
   color: #12126d;
@@ -30,6 +42,7 @@ h1 {
   font-family: "Sanchez";
   size: 200px;
   border-radius: 4px;
+  position: center;
   cursor: pointer;
 }
 
@@ -57,4 +70,13 @@ h1 {
   padding: 1em;
   border-radius: 25px;
   padding-left: 40px
+}
+
+.footer {
+  color: #12126d;
+  font-family: "Sanchez";
+  font-size: 15px;
+  border-radius: 4px;
+  padding: 10px;
+  text-align: center;
 }
