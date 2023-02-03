@@ -3,8 +3,8 @@ import { ComposableMap, Geographies, Geography, Annotation, ZoomableGroup, Marke
 import { geoPatterson } from "d3-geo-projection";
 import Navbar from './navBar.js';
 
-// const geoURL = "https://raw.githubusercontent.com/lotusms/world-map-data/main/world.json";
-const geoURL = "https://raw.githubusercontent.com/deldersveld/topojson/master/world-continents.json";
+const geoURL = "https://raw.githubusercontent.com/lotusms/world-map-data/main/world.json";
+const geoURLCont = "https://raw.githubusercontent.com/deldersveld/topojson/master/world-continents.json";
 
 const width = 800;
 const height = 400;
@@ -16,29 +16,18 @@ const projection = geoPatterson()
 const Map = ({setTooltipContent}) => {
   const [countries, setCountries] =  useState([])
 
-  // const getData = () => {
-  //   fetch('http://localhost:3001/countries', {
-  //     header:{
-  //       'Content-Type': 'application/json',
-  //       'Accept': 'application/json',
-  //     }
-  //   })
-  //   .then((res) => res.json())
-  //   .then((data) => {setCountries(data)})
-  // }
- 
-  // useEffect(() => {
-  //   getData()
-  // }, [])
-
   const handleClick = (geo) => () => {
-    const CONTINENT  = geo.properties.continent;
-    console.log(`${CONTINENT}`)
-    setTooltipContent(`${CONTINENT}`);
+    const country  = geo.properties.name;
+    console.log(`${country}`)
+    setTooltipContent(`${country}`);
       <p id="my-element" data-tooltip-content="hello world">
         Tooltip
       </p>
   };
+
+  // const handleClick = (countryOrContinent) => {
+
+  // }
 
   return (
     <div className="Map">

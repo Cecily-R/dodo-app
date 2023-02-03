@@ -56,7 +56,7 @@ h1 {
   fill:#0e652b;
   position: relative;
   cursor: url(newMouse.png), auto;
-  repeat: repeat;
+  outline: none;
 }
 
 .sidebar-wrapper {
@@ -80,4 +80,16 @@ h1 {
   border-radius: 4px;
   padding: 10px;
   text-align: center;
+}
+
+.countryOrContinentButton {
+  background: #ffc47d;
+  border: 0;
+  color: #12126d; 
+  padding: 7px;
+  font-family: "Sanchez";
+  size: 200px;
+  border-radius: 4px;
+  position: center;
+  cursor: pointer;
 }
