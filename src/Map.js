@@ -11,7 +11,7 @@ const height = 400;
 
 const projection = geoPatterson()
   .translate([width / 2, height / 1.6])
-  .scale(127);
+  .scale(128);
 
 const Map = ({setTooltipContent}) => {
   const [countries, setCountries] =  useState([])
