@@ -1,7 +1,7 @@
-const BottomBar = () => {
+const Footer = () => {
   return (
     <header>
-      <div className="bottomBar">
+      <div className="footer">
         click on a continent to see the species in the animal kingdom that need our help the most<br />
         built by Anthony, Cecily, JC, Mike and Naila
       </div>
@@ -9,4 +9,4 @@ const BottomBar = () => {
   );
 }
  
-export default BottomBar;
+export default Footer;
