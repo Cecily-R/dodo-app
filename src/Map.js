@@ -13,21 +13,21 @@ const projection = geoPatterson()
   .translate([width / 2, height / 1.6])
   .scale(128);
 
-const Map = ({setTooltipContent}) => {
+const Map = ({setSidebarContent}) => {
   const areaSwitchButton = useRef(null);
-  const [countries, setCountries] =  useState([])
   const [buttonText, setButtonText] = useState('');
   const [geoURL, setGeoURL] = useState("https://raw.githubusercontent.com/lotusms/world-map-data/main/world.json");
   const [selectedArea, setSelectedArea] = useState();
 
   const handleClick = (geo) => () => {
     const countryOrContinent = areaSwitchButton.current.textContent
+
     if (countryOrContinent === 'continents' ) {
       setSelectedArea(geo.properties.name);
     } else {
       setSelectedArea(geo.properties.continent);
     };
-    setTooltipContent(`${selectedArea}`);
+    setSidebarContent(selectedArea);
   };
 
   function handleCountryClick(geoUrl) {

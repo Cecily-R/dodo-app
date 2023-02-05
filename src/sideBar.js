@@ -1,8 +1,8 @@
 import { useEffect } from 'react'
 
-const Sidebar = ({country}) => {
+const Sidebar = ({sidebarContent}) => {
  return (
- <p>{country}</p>
+   <p>{sidebarContent}</p>
  )}
  
 export default Sidebar;
