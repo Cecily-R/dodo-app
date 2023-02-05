@@ -66,6 +66,7 @@ h1 {
   float: left;
   font-family: "Sanchez";
   font-size: 0.9em;
+  color: #12126d;
   margin-left: 8px;
   margin-bottom: 8px;
   padding: 1em;
@@ -82,14 +83,14 @@ h1 {
   text-align: center;
 }
 
-.countryOrContinentButton {
+#countryOrContinentButton {
   background: #ffc47d;
-  border: 0;
   color: #12126d; 
   padding: 7px;
+  margin-right: 10px;
   font-family: "Sanchez";
   size: 200px;
   border-radius: 4px;
-  position: center;
   cursor: pointer;
+  float: right;
 }

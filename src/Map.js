@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { ComposableMap, Geographies, Geography, Annotation, ZoomableGroup, Marker} from "react-simple-maps";
 import { geoPatterson } from "d3-geo-projection";
 import Navbar from './navBar.js';
 
-const geoURL = "https://raw.githubusercontent.com/lotusms/world-map-data/main/world.json";
-const geoURLCont = "https://raw.githubusercontent.com/deldersveld/topojson/master/world-continents.json";
+// const geoURL = "https://raw.githubusercontent.com/lotusms/world-map-data/main/world.json";
+// const geoURLCont = "https://raw.githubusercontent.com/deldersveld/topojson/master/world-continents.json";
 
 const width = 800;
 const height = 400;
@@ -14,44 +14,45 @@ const projection = geoPatterson()
   .scale(128);
 
 const Map = ({setTooltipContent}) => {
+  const areaSwitchButton = useRef(null);
   const [countries, setCountries] =  useState([])
+  const [buttonText, setButtonText] = useState('');
+  const [geoURL, setGeoURL] = useState("https://raw.githubusercontent.com/lotusms/world-map-data/main/world.json");
+  const [selectedArea, setSelectedArea] = useState();
 
   const handleClick = (geo) => () => {
-    const country  = geo.properties.name;
-    console.log(`${country}`)
-    setTooltipContent(`${country}`);
-      <p id="my-element" data-tooltip-content="hello world">
-        Tooltip
-      </p>
+    const countryOrContinent = areaSwitchButton.current.textContent
+    if (countryOrContinent === 'continents' ) {
+      setSelectedArea(geo.properties.name);
+    } else {
+      setSelectedArea(geo.properties.continent);
+    };
+    setTooltipContent(`${selectedArea}`);
   };
 
-  // const handleClick = (countryOrContinent) => {
-
-  // }
+  function handleCountryClick(geoUrl) {
+    if (buttonText === 'continents') {
+      setButtonText('countries');
+      setGeoURL("https://raw.githubusercontent.com/deldersveld/topojson/master/world-continents.json");
+    } else {
+      setButtonText('continents');
+      setGeoURL("https://raw.githubusercontent.com/lotusms/world-map-data/main/world.json");
+    };
+  };
 
   return (
     <div className="Map">
-        <ComposableMap width={width} height={height} projection={projection} position="relative">
-            {/* <ZoomableGroup center={[0, 0]} zoom={1.25}> */}
-              <Geographies geography={geoURL}>
-                {({geographies}) =>
-                  geographies.map((geo, index) => {
+    <button id="countryOrContinentButton" onClick={handleCountryClick} ref={areaSwitchButton}>{buttonText || 'continents'}</button>     
+      <ComposableMap width={width} height={height} projection={projection} position="relative">
+      <ZoomableGroup translateExtent={[[0, 0], [width, height]]}>
+            <Geographies geography={geoURL}>
+              {({geographies}) =>
+                geographies.map((geo, index) => {
                     return (
-                      <Geography
+                    <Geography
                       key={index}
                       geography={geo}
                       onClick={handleClick(geo)}
-                      // onMouseEnter={() => {                  
-                      //   const CONTINENT  = geo.properties.continent;
-                      //   console.log(`${CONTINENT}`)
-                      //   setTooltipContent(`${CONTINENT}`);
-                      //   <p id="my-element" data-tooltip-content="hello world">
-                      //     Tooltip
-                      //   </p>
-                      // }}
-                      // onMouseLeave={() => {
-                      //   setTooltipContent("");
-                      // }}
                       style={{
                         hover: {
                           fill: "#23cf8c",
@@ -66,14 +67,15 @@ const Map = ({setTooltipContent}) => {
                         }
                       }}
                       />
-                    )
-                  })
-                }
-              </Geographies> 
-            {/* </ZoomableGroup> */}
-        </ComposableMap>
-      </div>
-  );
-}
+                  )
+                })
+              }
+            </Geographies> 
+          </ZoomableGroup>
+      </ComposableMap>
+    </div>
+  )
+};
+
 
 export default Map;
