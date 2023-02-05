@@ -1,5 +1,3 @@
-import { useEffect } from 'react'
-
 const Sidebar = ({sidebarContent}) => {
  return (
    <p>{sidebarContent}</p>

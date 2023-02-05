@@ -17,17 +17,14 @@ const Map = ({setSidebarContent}) => {
   const areaSwitchButton = useRef(null);
   const [buttonText, setButtonText] = useState('');
   const [geoURL, setGeoURL] = useState("https://raw.githubusercontent.com/lotusms/world-map-data/main/world.json");
-  const [selectedArea, setSelectedArea] = useState();
+  const [_, setSelectedArea] = useState();
 
   const handleClick = (geo) => () => {
-    const countryOrContinent = areaSwitchButton.current.textContent
+    const selectedArea = areaSwitchButton.current.textContent
+    const countryOrContinent = selectedArea == 'continents' ? geo.properties.name : geo.properties.continent
 
-    if (countryOrContinent === 'continents' ) {
-      setSelectedArea(geo.properties.name);
-    } else {
-      setSelectedArea(geo.properties.continent);
-    };
-    setSidebarContent(selectedArea);
+    setSelectedArea(countryOrContinent);
+    setSidebarContent(countryOrContinent);
   };
 
   function handleCountryClick(geoUrl) {
