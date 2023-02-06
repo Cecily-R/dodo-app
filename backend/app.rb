@@ -25,4 +25,3 @@ class Application < Sinatra::Base
   end
 end
 
-Application.run!
