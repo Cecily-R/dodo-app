@@ -1,68 +1,56 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { ComposableMap, Geographies, Geography, Annotation, ZoomableGroup, Marker} from "react-simple-maps";
 import { geoPatterson } from "d3-geo-projection";
-import Navbar from './navBar.js';
+import ApiClient from './api/ApiClient'
 
-// const geoURL = "https://raw.githubusercontent.com/lotusms/world-map-data/main/world.json";
-const geoURL = "https://raw.githubusercontent.com/deldersveld/topojson/master/world-continents.json";
 
 const width = 800;
 const height = 400;
 
 const projection = geoPatterson()
-  .translate([width / 2, height / 1.75])
-  .scale(100);
+  .translate([width / 2, height / 1.6])
+  .scale(128);
 
-const Map = ({setTooltipContent}) => {
-  const [countries, setCountries] =  useState([])
-
-  // const getData = () => {
-  //   fetch('http://localhost:3001/countries', {
-  //     header:{
-  //       'Content-Type': 'application/json',
-  //       'Accept': 'application/json',
-  //     }
-  //   })
-  //   .then((res) => res.json())
-  //   .then((data) => {setCountries(data)})
-  // }
- 
-  // useEffect(() => {
-  //   getData()
-  // }, [])
+const Map = ({setSidebarContent, setSidebarAnimals}) => {
+  const areaSwitchButton = useRef(null);
+  const [buttonText, setButtonText] = useState('');
+  const [geoURL, setGeoURL] = useState("https://raw.githubusercontent.com/lotusms/world-map-data/main/world.json");
+  const [_, setSelectedArea] = useState();
 
   const handleClick = (geo) => () => {
-    const CONTINENT  = geo.properties.continent;
-    console.log(`${CONTINENT}`)
-    setTooltipContent(`${CONTINENT}`);
-      <p id="my-element" data-tooltip-content="hello world">
-        Tooltip
-      </p>
+    const selectedArea = areaSwitchButton.current.textContent
+    const countryOrContinent = selectedArea == 'continents' ? geo.properties.name : geo.properties.continent
+    const client = new ApiClient();
+
+    setSelectedArea(countryOrContinent);
+    setSidebarContent(countryOrContinent);
+
+    client.fetchAnimalsBySelectedArea(countryOrContinent, setSidebarAnimals)
+  };
+
+  function handleCountryClick() {
+    if (buttonText === 'continents') {
+      setButtonText('countries');
+      setGeoURL("https://raw.githubusercontent.com/deldersveld/topojson/master/world-continents.json");
+    } else {
+      setButtonText('continents');
+      setGeoURL("https://raw.githubusercontent.com/lotusms/world-map-data/main/world.json");
+    };
   };
 
   return (
     <div className="Map">
-        <ComposableMap width={width} height={height} projection={projection} position="relative">
-            <ZoomableGroup center={[0, 0]} zoom={1.25}>
-              <Geographies geography={geoURL}>
-                {({geographies}) =>
-                  geographies.map((geo, index) => {
+    <button id="countryOrContinentButton" onClick={handleCountryClick} ref={areaSwitchButton}>{buttonText || 'continents'}</button>     
+      <ComposableMap width={width} height={height} projection={projection} position="relative">
+      <ZoomableGroup translateExtent={[[0, 0], [width, height]]}>
+            <Geographies geography={geoURL}>
+              {({geographies}) =>
+                geographies.map((geo, index) => {
                     return (
-                      <Geography
+                    <Geography
                       key={index}
                       geography={geo}
                       onClick={handleClick(geo)}
-                      // onMouseEnter={() => {                  
-                      //   const CONTINENT  = geo.properties.continent;
-                      //   console.log(`${CONTINENT}`)
-                      //   setTooltipContent(`${CONTINENT}`);
-                      //   <p id="my-element" data-tooltip-content="hello world">
-                      //     Tooltip
-                      //   </p>
-                      // }}
-                      // onMouseLeave={() => {
-                      //   setTooltipContent("");
-                      // }}
                       style={{
                         hover: {
                           fill: "#23cf8c",
@@ -77,14 +65,15 @@ const Map = ({setTooltipContent}) => {
                         }
                       }}
                       />
-                    )
-                  })
-                }
-              </Geographies> 
-            </ZoomableGroup>
-        </ComposableMap>
-      </div>
-  );
-}
+                  )
+                })
+              }
+            </Geographies> 
+          </ZoomableGroup>
+      </ComposableMap>
+    </div>
+  )
+};
+
 
 export default Map;

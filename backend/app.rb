@@ -2,20 +2,26 @@
 
 require 'sinatra/base'
 require 'sinatra/reloader'
-require 'json'
+require "sinatra/cors"
 
 class Application < Sinatra::Base
+  register Sinatra::Cors
+
+  set :allow_origin, "http://localhost:3000"
+  set :allow_methods, "GET,HEAD,POST"
+  set :allow_headers, "content-type,if-modified-since"
+  set :expose_headers, "location,link"
+  
   configure :development do
     register Sinatra::Reloader
   end
 
-  get '/' do
-    'Hello'
+  before do
+    content_type :json
   end
 
-  get '/get-endangered-species-by-continent' do
-    file = File.open("./species_by_continent/#{params[:continent_name]}.json")
-    file
+  get '/get-endangered-species-by-selected-area' do
+    File.read("./species_by_continent/#{params[:selected_area_name]}.json")
   end
 end
 

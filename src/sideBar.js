@@ -1,8 +1,9 @@
-import { useEffect } from 'react'
-
-const Sidebar = ({country}) => {
+const Sidebar = ({sidebarContent, sidebarAnimals}) => {
  return (
- <p>{country}</p>
+  <>
+  <p>{sidebarContent}</p>
+  <p>{sidebarAnimals}</p>
+  </>
  )}
  
 export default Sidebar;
