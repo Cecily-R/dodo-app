@@ -1,10 +1,13 @@
+import Animal from './animal' 
+
 const Sidebar = ({sidebarContent, sidebarAnimals}) => {
+
  return (
   <>
-  <p>{sidebarContent}</p>
+  <h2>{sidebarContent}</h2>
   {sidebarAnimals !== undefined 
-    ? sidebarAnimals.result.map((animal) => {return (<p>{animal.common_name}</p>)}) 
-    : <p></p>}
+    ? sidebarAnimals.result.map((animal, i) => {return <Animal key={i} animal={animal}/>}) 
+    : "hello"}
   </>
  )}
  

@@ -1,11 +1,11 @@
-import Map from './Map.js';
-import Navbar from './navBar.js';
-import Sidebar from './sideBar.js'
-import Footer from './footer.js';
+import Map from './Map';
+import Navbar from './navBar';
+import Sidebar from './sideBar'
+import Footer from './footer';
 import React, {useState} from 'react';
 
 function App() {
-  const [sidebarContent, setSidebarContent] = useState("");
+  const [sidebarContent, setSidebarContent] = useState();
   const [sidebarAnimals, setSidebarAnimals] = useState();
 
   return (
