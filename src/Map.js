@@ -19,7 +19,7 @@ const Map = ({setSidebarContent, setSidebarAnimals}) => {
 
   const handleClick = (geo) => () => {
     const selectedArea = areaSwitchButton.current.textContent
-    const countryOrContinent = selectedArea == 'continents' ? geo.properties.name : geo.properties.continent
+    const countryOrContinent = selectedArea === 'continents' ? geo.properties.name : geo.properties.continent
     const client = new ApiClient();
 
     setSelectedArea(countryOrContinent);
