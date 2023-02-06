@@ -1,4 +1,5 @@
 import React from "react"
+import wolf from './images/red_wolf.jpg'
 
 const Animal = (animal) => {
   return (
@@ -7,7 +8,7 @@ const Animal = (animal) => {
       <p>{animal.animal.scientific_name}</p>
       <p>{animal.animal.subpopulation}</p>
       <p>{animal.animal.habitat}</p>
-      <p>{animal.animal.image}</p>
+      <img src={ wolf } />
     </div>
   );
 };

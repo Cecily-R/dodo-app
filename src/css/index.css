@@ -104,28 +104,32 @@ header .navbar {
 }
 
 .sidebar-wrapper {
-  background-color: #dbd56e; 
+  background-color: #66999b; 
   width: 20%;
   position: relative;
   float: left;
   font-family: "Quicksand";
   font-size: 0.9em;
-  color: #12126d;
+  color: white;
   margin-top: 8px;
   margin-left: 8px;
   margin-bottom: 8px;
   padding: 1em;
   border-radius: 10px;
   padding-left: 15px;
+  overflow: hidden;
 }
 
 .footer {
-  color: #12126d;
+  background: #496a81;
+  color: white;
   font-family: "Quicksand";
   font-size: 15px;
-  border-radius: 4px;
+  border-radius: 0px;
   padding: 10px;
+  padding-bottom: 30px;
   text-align: center;
+  margin-bottom: 0px;
 }
 
 #countryOrContinentButton {
@@ -145,8 +149,9 @@ header .navbar {
   color: white;
   max-width: auto 0;
   border-radius: 5px;
-  padding: 10px;
+  padding: 20px;
   margin-bottom: 5px;
+
 }
 
 .vertical-center {
