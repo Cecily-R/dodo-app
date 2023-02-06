@@ -52,6 +52,40 @@ h2 {
   cursor: pointer;
 }
 
+header .navbar {
+  background: #496a81;
+  border: 0;
+  color: #12126d;
+  background-color: ffff; 
+  padding: 15px;
+  font-family: "Quicksand";
+  position: relative;
+  size: 200px;
+  border-radius: 0px;
+
+  align-items: center;
+}
+
+.navbar a {
+  color: white;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.navbar img {
+  align-items: center;
+  margin: 10px;
+}
+
+.navbar li {
+  list-style-type: none;
+  margin: 10px;
+  color: white;
+  font-weight: 900;
+  cursor: pointer;
+  font-family: Quicksand;
+}
+
 .navbar ul {
   list-style-type: none;
   margin: 0;

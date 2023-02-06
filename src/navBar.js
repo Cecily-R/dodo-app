@@ -1,16 +1,15 @@
+import logo from "./images/dodo.png";
+
 const Navbar = () => {
   return (
     <header>
-      <h1>dodo.</h1>
-      <nav className="navbar">
-        <ul>
-          <li>
-            <button className="breakingNewsButton">breaking news.</button >
-            <button className="resourcesButton">donate here.</button >
-          </li>
-        </ul>
-      </nav>
-    </header>
+      <div className="navbar">
+        <img src={logo} alt="logo"/>
+          <div class="vertical-center">
+            <a>Breaking News</a> | <a>Make a Donation</a> | <a>About</a>
+          </div>
+        </div>
+      </header>
   );
 }
  
