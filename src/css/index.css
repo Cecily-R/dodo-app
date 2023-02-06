@@ -13,7 +13,7 @@ body {
 }
 
 header {
-  padding-top: 10px;
+  padding-top: 0px;
 }
 
 h1 {
@@ -57,13 +57,17 @@ header .navbar {
   border: 0;
   color: #12126d;
   background-color: ffff; 
-  padding: 15px;
+  padding: 10px;
   font-family: "Quicksand";
   position: relative;
   size: 200px;
   border-radius: 0px;
 
   align-items: center;
+}
+
+.navbar img {
+  padding-left: 20px;
 }
 
 .navbar a {
@@ -107,11 +111,12 @@ header .navbar {
   font-family: "Quicksand";
   font-size: 0.9em;
   color: #12126d;
+  margin-top: 8px;
   margin-left: 8px;
   margin-bottom: 8px;
   padding: 1em;
   border-radius: 10px;
-  padding-left: 20px;
+  padding-left: 15px;
 }
 
 .footer {
@@ -138,8 +143,18 @@ header .navbar {
 .animalInfo {
   background-color: #88ab75;
   color: white;
+  max-width: auto 0;
   border-radius: 5px;
   padding: 10px;
   margin-bottom: 5px;
+}
 
+.vertical-center {
+  margin: 0px;
+  margin-top: 50px;
+  position: relative;
+  float: right;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
