@@ -1,10 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { ComposableMap, Geographies, Geography, Annotation, ZoomableGroup, Marker} from "react-simple-maps";
 import { geoPatterson } from "d3-geo-projection";
-import Navbar from './navBar.js';
+import ApiClient from './api/ApiClient'
 
-// const geoURL = "https://raw.githubusercontent.com/lotusms/world-map-data/main/world.json";
-// const geoURLCont = "https://raw.githubusercontent.com/deldersveld/topojson/master/world-continents.json";
 
 const width = 800;
 const height = 400;
@@ -13,7 +11,7 @@ const projection = geoPatterson()
   .translate([width / 2, height / 1.6])
   .scale(128);
 
-const Map = ({setSidebarContent}) => {
+const Map = ({setSidebarContent, setSidebarAnimals}) => {
   const areaSwitchButton = useRef(null);
   const [buttonText, setButtonText] = useState('');
   const [geoURL, setGeoURL] = useState("https://raw.githubusercontent.com/lotusms/world-map-data/main/world.json");
@@ -22,12 +20,15 @@ const Map = ({setSidebarContent}) => {
   const handleClick = (geo) => () => {
     const selectedArea = areaSwitchButton.current.textContent
     const countryOrContinent = selectedArea == 'continents' ? geo.properties.name : geo.properties.continent
+    const client = new ApiClient();
 
     setSelectedArea(countryOrContinent);
     setSidebarContent(countryOrContinent);
+
+    client.fetchAnimalsBySelectedArea(countryOrContinent, setSidebarAnimals)
   };
 
-  function handleCountryClick(geoUrl) {
+  function handleCountryClick() {
     if (buttonText === 'continents') {
       setButtonText('countries');
       setGeoURL("https://raw.githubusercontent.com/deldersveld/topojson/master/world-continents.json");

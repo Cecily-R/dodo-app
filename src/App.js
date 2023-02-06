@@ -6,6 +6,7 @@ import React, {useState} from 'react';
 
 function App() {
   const [sidebarContent, setSidebarContent] = useState("");
+  const [sidebarAnimals, setSidebarAnimals] = useState();
 
   return (
     <>
@@ -13,10 +14,10 @@ function App() {
       <Navbar />
       <div className="flex-container">
         <div className="sidebar-wrapper">
-          <Sidebar sidebarContent={sidebarContent}/>
+          <Sidebar sidebarContent={sidebarContent} sidebarAnimals={sidebarAnimals}/>
         </div>
         <div className="map-wrapper">
-          <Map setSidebarContent={setSidebarContent}/>
+          <Map setSidebarContent={setSidebarContent} setSidebarAnimals={setSidebarAnimals}/>
         </div>
       </div>
     </div>
