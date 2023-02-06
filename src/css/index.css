@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&family=Rubik+Gemstones&family=Sanchez:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;800&family=VT323&display=swap');
+
 
 body {
   height: 100%;
@@ -18,7 +20,11 @@ h1 {
   margin: 0;
   text-align: center;
   color: #12126d;
-  font-family: "Rubik Gemstones";
+  font-family: "Quicksand";
+}
+
+h2 {
+  text-align: center;
 }
 
 .navbar .breakingNewsButton {
@@ -26,7 +32,7 @@ h1 {
   border: 0;
   color: #12126d;
   background-color: ffff; 
-  font-family: "Sanchez";
+  font-family: "Quicksand";
   size: 200px;
   border-radius: 4px;
   padding: 10px;
@@ -39,7 +45,7 @@ h1 {
   color: #12126d;
   background-color: ffff; 
   padding: 10px;
-  font-family: "Sanchez";
+  font-family: "Quicksand";
   size: 200px;
   border-radius: 4px;
   position: center;
@@ -60,23 +66,23 @@ h1 {
 }
 
 .sidebar-wrapper {
-  background-color: #ffc47d; 
+  background-color: #dbd56e; 
   width: 20%;
   position: relative;
   float: left;
-  font-family: "Sanchez";
+  font-family: "Quicksand";
   font-size: 0.9em;
   color: #12126d;
   margin-left: 8px;
   margin-bottom: 8px;
   padding: 1em;
-  border-radius: 25px;
-  padding-left: 40px
+  border-radius: 10px;
+  padding-left: 20px;
 }
 
 .footer {
   color: #12126d;
-  font-family: "Sanchez";
+  font-family: "Quicksand";
   font-size: 15px;
   border-radius: 4px;
   padding: 10px;
@@ -88,9 +94,18 @@ h1 {
   color: #12126d; 
   padding: 7px;
   margin-right: 10px;
-  font-family: "Sanchez";
+  font-family: "Quicksand";
   size: 200px;
   border-radius: 4px;
   cursor: pointer;
   float: right;
+}
+
+.animalInfo {
+  background-color: #88ab75;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 5px;
+
 }
