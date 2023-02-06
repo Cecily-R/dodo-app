@@ -9,7 +9,6 @@ class ApiClient {
 
     return fetch(URL)
       .then(response => response.json()) 
-      .then(data => JSON.stringify(data))
       .then(json => {
         setSidebarAnimals(json);
       });
