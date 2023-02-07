@@ -7,6 +7,12 @@
     "population_density": "1234923"
   },
   {
+    "ISO3": "AQ",
+    "name": "Antartica",
+    "region": "Antartica",
+    "population_density": "0"
+  },
+  {
     "ISO3": "ALB",
     "name": "Albania",
     "region": "EMEA",
