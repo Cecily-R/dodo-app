@@ -5,7 +5,7 @@
   "common_name": "Red Wolf",
   "subpopulation": "21",
   "habitat": "xxx",
-  "image": "./images/na_id_1.jpg"
+  "image": "./images/na_id_01.jpg"
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "common_name": "Ocelot",
     "subpopulation": "35",
     "habitat": "Rainforest",
-    "image": "./images/na_id_2.jpg"
+    "image": "./images/na_id_02.jpg"
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "common_name": "Burrowing Owl",
     "subpopulation": "10000",
     "habitat": "xxx",
-    "image": "./images/na_id_3.jpg"
+    "image": "./images/na_id_03.jpg"
   },
   {
     "id": 4,
@@ -29,7 +29,7 @@
     "common_name": "Florida Manatee",
     "subpopulation": "7500",
     "habitat": "River",
-    "image": "./images/na_id_4.jpg"
+    "image": "./images/na_id_04.jpg"
   },
   {
     "id": 5,
@@ -37,7 +37,7 @@
     "common_name": "California Condor",
     "subpopulation": "336",
     "habitat": "xxx",
-    "image": "./images/na_id_5.jpg"
+    "image": "./images/na_id_05.jpg"
   },
   {
     "id": 6,
@@ -45,7 +45,7 @@
     "common_name": "Cougar",
     "subpopulation": "20000",
     "habitat": "Mountain",
-    "image": "./images/na_id_6.jpg"
+    "image": "./images/na_id_06.jpg"
   },
   {
     "id": 7,
@@ -53,7 +53,7 @@
     "common_name": "Island Fox",
     "subpopulation": "2300",
     "habitat": "xxx",
-    "image": "./images/na_id_7.jpg"
+    "image": "./images/na_id_07.jpg"
   },
 
   {
@@ -62,7 +62,7 @@
     "common_name": "Northern Swift Fox",
     "subpopulation": "870",
     "habitat": "xxx",
-    "image": "./images/na_id_8.jpg"
+    "image": "./images/na_id_08.jpg"
   },
   {
     "id": 9,
@@ -70,7 +70,7 @@
     "common_name": "Sea Otter",
     "subpopulation": "3000",
     "habitat": "xxx",
-    "image": "./images/na_id_9.jpg"
+    "image": "./images/na_id_09.jpg"
   },
   {
     "id": 10,
