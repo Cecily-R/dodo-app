@@ -1,14 +1,8 @@
-import React, { useState } from "react";
-import News from './News';
-import NewsClient from './api/NewsClient'
+import React from "react";
 
-const Navbar = () => {
-  const [news, setNews] = useState('');
-
+const Navbar = (props) => {
   function handleClick() {
-
-    const newsClient = new NewsClient();
-    newsClient.fetchNewsArticles(setNews); 
+    props.setShowNews(!props.showNews)
   };
 
   return (
@@ -17,7 +11,7 @@ const Navbar = () => {
       <nav className="navbar">
         <ul>
           <li>
-          <button className="breakingNewsButton" onClick={handleClick}>
+            <button className="breakingNewsButton" onClick={handleClick}>
               breaking news.
             </button>
           </li>

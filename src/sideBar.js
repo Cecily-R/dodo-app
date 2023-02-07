@@ -2,19 +2,16 @@ import React, { useState } from "react";
 import Animal from './animal' 
 import News from './News'
 
-const Sidebar = ({sidebarContent, sidebarAnimals, news}) => {
-
- return (
+const Sidebar = (props) => {
+return (
   <>
-  <h2>{sidebarContent}</h2>
-  {sidebarAnimals !== undefined 
-    ? sidebarAnimals.result.map((animal, i) => {return <Animal key={i} animal={animal}/>}) 
+  <h2>{props.sidebarContent}</h2>
+  {props.sidebarAnimals !== undefined 
+    ? props.sidebarAnimals.result.map((animal, i) => {return <Animal key={i} animal={animal}/>}) 
     : null}
-  {news.articles !== undefined 
-        ? news.articles.map((newsStory, i) => {return <News key={i} news={newsStory}/>}) 
-        : null} 
+  {props.showNews ? <News /> : null}
   </>
- )}
+  )
+}
  
 export default Sidebar;
-
