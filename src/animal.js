@@ -1,5 +1,13 @@
 import React from "react"
-import wolf from './images/red_wolf.jpg'
+
+const images = importAll(require.context('./images', false, /\.(png|jpe?g|svg)$/));
+
+function importAll(r) {
+  let images = {};
+   r.keys().forEach((item, index) => { images[item.replace('./', '')] = r(item); });
+  return images
+ }
+ 
 
 const Animal = (animal) => {
   return (
@@ -8,7 +16,7 @@ const Animal = (animal) => {
       <p>{animal.animal.scientific_name}</p>
       <p>{animal.animal.subpopulation}</p>
       <p>{animal.animal.habitat}</p>
-      <img src={ wolf } />
+      <img src={ images } alt=""/>
     </div>
   );
 };

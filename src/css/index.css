@@ -90,6 +90,18 @@ header .navbar {
   font-family: Quicksand;
 }
 
+.navbar button {
+  background-color: #66999b;
+  color: white;
+  font-family: "Quicksand";
+  font-weight: auto;
+  font-size: medium;
+  border: 0;
+  box-shadow: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
 .navbar ul {
   list-style-type: none;
   margin: 0;
@@ -106,6 +118,7 @@ header .navbar {
 .sidebar-wrapper {
   background-color: #66999b; 
   width: 20%;
+  height: 600px;
   position: relative;
   float: left;
   font-family: "Quicksand";
@@ -115,9 +128,17 @@ header .navbar {
   margin-left: 8px;
   margin-bottom: 8px;
   padding: 1em;
-  border-radius: 10px;
+  border-radius: 8px;
   padding-left: 15px;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-color: #66999b;
+  /* scrollbar-arrow-color: #66999b;
+  scrollbar-3dlight-color: #66999b;
+  scrollbar-base-color: #66999b;
+  scrollbar-darkshadow-color: #66999b;
+  scrollbar-highlight-color: #66999b ;
+  scrollbar-gutter: 0px; */
 }
 
 .footer {
@@ -148,10 +169,12 @@ header .navbar {
   background-color: #88ab75;
   color: white;
   max-width: auto 0;
-  border-radius: 5px;
-  padding: 20px;
+  border-radius: 8px;
+  /* padding: 20px; */
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-bottom: 10px;
   margin-bottom: 5px;
-
 }
 
 .vertical-center {
