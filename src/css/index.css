@@ -137,6 +137,21 @@ header .navbar {
   display: none;
 }
 
+a:link {
+  color: #12126d; 
+  text-decoration: none;
+}
+
+a:visited {
+  color: #12126d; 
+  text-decoration: none;
+}
+
+a:hover { 
+  text-decoration: underline; 
+}
+
+
 .footer {
   background: #496a81;
   color: white;
@@ -160,10 +175,6 @@ header .navbar {
   border-radius: 4px;
   cursor: pointer;
   float: right;
-}
-
-.storyLink {
-  color: none;
 }
 
 .animalInfo {

@@ -7,7 +7,7 @@ function importAll(r) {
    r.keys().forEach((item, index) => { images[item.replace('./', '')] = r(item); });
   return images
  }
- 
+
 
 const Animal = (animal) => {
   return (
