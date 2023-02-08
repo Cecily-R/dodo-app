@@ -11,7 +11,7 @@ const projection = geoPatterson()
   .translate([width / 2, height / 1.6])
   .scale(128);
 
-const Map = ({setSidebarContent, setSidebarAnimals, setShowAnimals}) => {
+const Map = ({setSidebarContent, setSidebarAnimals, setShowAnimals, setShowNews}) => {
   const areaSwitchButton = useRef(null);
   const [buttonText, setButtonText] = useState('');
   const [geoURL, setGeoURL] = useState("https://raw.githubusercontent.com/lotusms/world-map-data/main/world.json");
@@ -24,8 +24,10 @@ const Map = ({setSidebarContent, setSidebarAnimals, setShowAnimals}) => {
 
     setSelectedArea(countryOrContinent);
     setSidebarContent(countryOrContinent);
+    setShowAnimals(true);
+    setShowNews(false);
 
-    client.fetchAnimalsBySelectedArea(countryOrContinent, setSidebarAnimals, setShowAnimals)
+    client.fetchAnimalsBySelectedArea(countryOrContinent, setSidebarAnimals)
   };
 
   function handleCountryClick() {

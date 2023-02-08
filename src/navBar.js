@@ -4,7 +4,8 @@ import logo from "./images/dodo.png";
 const Navbar = (props) => {
   function handleClick() {
     props.setShowNews(!props.showNews)
-    props.setShowAnimal(!props.showAnimals)
+    props.setShowAnimals(false)
+    props.setSidebarContent('Breaking News')
   };
 
   return (

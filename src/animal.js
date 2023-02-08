@@ -14,8 +14,8 @@ const Animal = (animal) => {
     <div className="animalInfo">
       <h3>{animal.animal.common_name}</h3>
       <p>{animal.animal.scientific_name}</p>
-      <p>{animal.animal.subpopulation}</p>
-      <p>{animal.animal.habitat}</p>
+      <p>Subpopulation: {animal.animal.subpopulation}</p>
+      <p>Habitat: {animal.animal.habitat}</p>
       <img src={ images } alt=""/>
     </div>
   );

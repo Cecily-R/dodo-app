@@ -5,7 +5,6 @@ const NewsStory = (props) => {
 
   return (
     <div className='news-story'>
-      {console.log(story)}
       <h3>
         <a className='storyLink' href={story.url} target='_blank'>{story.title}</a>
       </h3>
