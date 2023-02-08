@@ -44,6 +44,7 @@
   },
   "devDependencies": {
     "cypress": "^12.4.1",
-    "react-test-renderer": "^18.2.0"
+    "react-test-renderer": "^18.2.0",
+    "webpack": "^5.75.0"
   }
 }

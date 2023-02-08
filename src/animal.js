@@ -1,5 +1,5 @@
 import React from "react"
-import image from './images/africa/af_id_02.jpg'
+
 
 // const images = importAll(require.context('./images', false, /\.(png|jpe?g|svg)$/));
 
@@ -15,13 +15,13 @@ const Animal = (animal) => {
     <div className="animalInfo">
       <h3>{animal.animal.common_name}</h3>
       <p>{animal.animal.scientific_name}</p>
-      <p>Subpopulation: {animal.animal.subpopulation}</p>
-      <p>{animal.animal.habitat}</p>
-      <img src={ image } width="150" height="150" alt=""/>
+      <p>Subpopulation: <b>{animal.animal.subpopulation}</b></p>
+      <p>Habitat: <b>{animal.animal.habitat}</b></p>
+      <p>{animal.animal.image}</p>
     </div>
   );
 };
 
-
+// <img src={ image } width="150" height="150" alt=""/>
 export default Animal;
 

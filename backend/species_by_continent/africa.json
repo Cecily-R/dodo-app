@@ -6,7 +6,7 @@
 			"scientific_name": "Diceros bicornis",
 			"common_name": "Black Rhinoceros",
 			"subpopulation": "2056",
-			"habitat": "xxx",
+			"habitat": "Savannah",
 			"image": "af_id_01.jpg"
 		},
 		{
@@ -14,7 +14,7 @@
 			"scientific_name": "Loxodonta africana",
 			"common_name": "African Elephant",
 			"subpopulation": "415000",
-			"habitat": "xxx",
+			"habitat": "Savannah",
 			"image": "af_id_02.jpg"
 		},
 		{
@@ -22,7 +22,7 @@
 			"scientific_name": "Gorilla beringei",
 			"common_name": "Eastern Gorilla",
 			"subpopulation": "6800",
-			"habitat": "xxx",
+			"habitat": "Rainforest",
 			"image": "af_id_03.jpg"
 		},
 		{
@@ -30,7 +30,7 @@
 			"scientific_name": "Acinonyx jubatus",
 			"common_name": "Saharan Cheetah",
 			"subpopulation": "8000",
-			"habitat": "xxx",
+			"habitat": "Desert",
 			"image": "af_id_04.jpg"
 		},
 		{
@@ -38,7 +38,7 @@
 			"scientific_name": "Lycaon pictus",
 			"common_name": "African Wild Dog",
 			"subpopulation": "6600",
-			"habitat": "xxx",
+			"habitat": "Savannah",
 			"image": "af_id_05.jpg"
 		},
 		{
@@ -46,7 +46,7 @@
 			"scientific_name": "Oryx dammah",
 			"common_name": "Scimitar-horned Oryx",
 			"subpopulation": "400",
-			"habitat": "xxx",
+			"habitat": "Desert",
 			"image": "af_id_06.jpg"
 		},
 		{
@@ -54,7 +54,7 @@
 			"scientific_name": "Tragelaphus buxtoni",
 			"common_name": "Mountain Nyala",
 			"subpopulation": "4000",
-			"habitat": "xxx",
+			"habitat": "Woodland / Bush",
 			"image": "af_id_07.jpg"
 		},
 
@@ -63,7 +63,7 @@
 			"scientific_name": "Nanger dama",
 			"common_name": "Dama Gazelle",
 			"subpopulation": "400",
-			"habitat": "xxx",
+			"habitat": "Savannah",
 			"image": "af_id_08.jpg"
 		},
 		{
@@ -71,7 +71,7 @@
 			"scientific_name": "Prolemur simus",
 			"common_name": "Greater Bamboo Lemur",
 			"subpopulation": "160",
-			"habitat": "xxx",
+			"habitat": "Forest",
 			"image": "af_id_09.jpg"
 		},
 		{
@@ -79,7 +79,7 @@
 			"scientific_name": "Caracal aurata",
 			"common_name": "African Golden Cat",
 			"subpopulation": "10000",
-			"habitat": "xxx",
+			"habitat": "Rainforest",
 			"image": "af_id_10.jpg"
 		}
 	]
