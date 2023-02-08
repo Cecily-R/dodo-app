@@ -1,15 +1,17 @@
+import React, { useState } from "react";
 import Animal from './animal' 
+import News from './News'
 
-const Sidebar = ({sidebarContent, sidebarAnimals}) => {
-
- return (
+const Sidebar = (props) => {
+return (
   <>
-  <h2>{sidebarContent}</h2>
-  {sidebarAnimals !== undefined 
-    ? sidebarAnimals.result.map((animal, i) => {return <Animal key={i} animal={animal}/>}) 
-    : "Click a Continent"}
+  <h2>{props.sidebarContent}</h2>
+  {props.sidebarAnimals !== undefined 
+    ? props.sidebarAnimals.result.map((animal, i) => {return <Animal key={i} animal={animal}/>}) 
+    : null}
+  {props.showNews ? <News /> : null}
   </>
- )}
+  )
+}
  
 export default Sidebar;
-
