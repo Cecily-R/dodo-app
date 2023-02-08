@@ -7,24 +7,17 @@ const Navbar = (props) => {
   };
 
   return (
-    <header> 
-      <h1>dodo.</h1>
+    <header>
       <nav className="navbar">
-      <div className="vertical-center">  
-        <ul>
         <img src={logo} alt="logo" />
-          <li>
+          <div className="vertical-center"> 
             <button className="breakingNewsButton" onClick={handleClick}>
-              breaking news.
-            </button>
-           </li>
-           <li>
-            <button className="resourcesButton">Make a Donation</button>
-           </li>
-        </ul>
-        </div>
-      </nav>
-    </header>
+              Breaking News
+                </button>
+              <button className="resourcesButton">Make a Donation</button>
+            </div>
+        </nav>
+      </header>
   );
 }
  
