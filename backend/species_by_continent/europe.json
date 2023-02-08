@@ -4,7 +4,7 @@
   "common_name": "European Ground Squirrel",
   "subpopulation": "15000",
   "habitat": "xxx",
-  "image": ""
+  "image": "eu_id_01.jpg"
   },
   {
     "id": 2,
@@ -12,7 +12,7 @@
     "common_name": "European Bison",
     "subpopulation": "2500",
     "habitat": "xxx",
-    "image": ""
+    "image": "eu_id_02.jpg"
   },
   {
     "id": 3,
@@ -20,7 +20,7 @@
     "common_name": "Eurasian Capercaillie",
     "subpopulation": "7000",
     "habitat": "xxx",
-    "image": ""
+    "image": "eu_id_03.jpg"
   },
   {
     "id": 4,
@@ -28,7 +28,7 @@
     "common_name": "Iberian Lynx",
     "subpopulation": "400",
     "habitat": "xxx",
-    "image": ""
+    "image": "eu_id_04.jpg"
   },
   {
     "id": 5,
@@ -36,7 +36,7 @@
     "common_name": "Pine Marten",
     "subpopulation": "1000",
     "habitat": "xxx",
-    "image": ""
+    "image": "eu_id_05.jpg"
   },
   {
     "id": 6,
@@ -44,7 +44,7 @@
     "common_name": "European Pond Turtle",
     "subpopulation": "1555",
     "habitat": "xxx",
-    "image": ""
+    "image": "eu_id_06.jpg"
   },
   {
     "id": 7,
@@ -52,7 +52,7 @@
     "common_name": "European Mink",
     "subpopulation": "3000",
     "habitat": "xxx",
-    "image": ""
+    "image": "eu_id_07.jpg"
   },
 
   {
@@ -61,7 +61,7 @@
     "common_name": "Polar Bear",
     "subpopulation": "22000",
     "habitat": "xxx",
-    "image": ""
+    "image": "eu_id_08.jpg"
   },
   {
     "id": 9,
@@ -69,7 +69,7 @@
     "common_name": "Eurasian Brown Bear",
     "subpopulation": "17000",
     "habitat": "xxx",
-    "image": ""
+    "image": "eu_id_09.jpg"
   },
   {
     "id": 10,
@@ -77,6 +77,6 @@
     "common_name": "North Atlantic Right Whale",
     "subpopulation": "500",
     "habitat": "xxx",
-    "image": ""
+    "image": "eu_id_10.jpg"
   }  
 ]}

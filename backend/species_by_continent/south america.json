@@ -3,8 +3,8 @@
   "scientific_name":"Ateles fusciceps",
   "common_name": "Black-headed Spider Monkey",
   "subpopulation": "250",
-  "habitat": "xxx",
-  "image": ""
+  "habitat": "Tropical Forest",
+  "image": "sa_id_01.jpg"
   },
   {
     "id": 2,
@@ -12,15 +12,15 @@
     "common_name": "Floreana Mockingbird",
     "subpopulation": "750",
     "habitat": "xxx",
-    "image": ""
+    "image": "sa_id_02.jpg"
   },
   {
     "id": 3,
     "scientific_name":"Lagidium ahuacaense",
     "common_name": "Mountain Viscacha",
     "subpopulation": "100",
-    "habitat": "xxx",
-    "image": ""
+    "habitat": "Mountain",
+    "image": "sa_id_03.jpg"
   },
   {
     "id": 4,
@@ -28,23 +28,23 @@
     "common_name": "Rio Branco Antbird",
     "subpopulation": "6000",
     "habitat": "Subtropical",
-    "image": ""
+    "image": "sa_id_04.jpg"
   },
   {
     "id": 5,
-    "scientific_name":"Isogomphodon oxyrhynchus",
-    "common_name": "Daggernose Shark",
-    "subpopulation": "250",
-    "habitat": "xxx",
-    "image": ""
+    "scientific_name":"Chlamyphorus truncatus",
+    "common_name": "Pink Fairy Armadillo",
+    "subpopulation": "xxx",
+    "habitat": "Subterranean",
+    "image": "sa_id_05.jpg"
   },
   {
     "id": 6,
     "scientific_name":"Pteronura brasiliensis",
     "common_name": "Giant Otter",
     "subpopulation": "3500",
-    "habitat": "xxx",
-    "image": ""
+    "habitat": "Wetlands",
+    "image": "sa_id_06.jpg"
   },
   {
     "id": 7,
@@ -52,7 +52,7 @@
     "common_name": "South American Tapir",
     "subpopulation": "4500",
     "habitat": "xxx",
-    "image": ""
+    "image": "sa_id_07.jpg"
   },
 
   {
@@ -61,7 +61,7 @@
     "common_name": "Pink Amazon Dolphin",
     "subpopulation": "130",
     "habitat": "xxx",
-    "image": ""
+    "image": "sa_id_08.jpg"
   },
   {
     "id": 9,
@@ -69,7 +69,7 @@
     "common_name": "Buff-headed Capuchin",
     "subpopulation": "2499",
     "habitat": "xxx",
-    "image": ""
+    "image": "sa_id_09.jpg"
   },
   {
     "id": 10,
@@ -77,6 +77,6 @@
     "common_name": "Pudu",
     "subpopulation": "10000",
     "habitat": "xxx",
-    "image": ""
+    "image": "sa_id_10.jpg"
   }  
 ]}
