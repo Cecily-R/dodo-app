@@ -4,7 +4,7 @@
   "common_name": "Snow Leopard",
   "subpopulation": "4000",
   "habitat": "xxx",
-  "image": ""
+  "image": "as_id_01.jpg"
   },
   {
     "id": 2,
@@ -12,7 +12,7 @@
     "common_name": "Asian Pangolin",
     "subpopulation": "10000",
     "habitat": "xxx",
-    "image": ""
+    "image": "as_id_02.jpg"
   },
   {
     "id": 3,
@@ -20,7 +20,7 @@
     "common_name": "Banteng",
     "subpopulation": "10000",
     "habitat": "xxx",
-    "image": ""
+    "image": "as_id_03.jpg"
   },
   {
     "id": 4,
@@ -28,7 +28,7 @@
     "common_name": "South China Tiger",
     "subpopulation": "20",
     "habitat": "xxx",
-    "image": ""
+    "image": "as_id_04.jpg"
   },
   {
     "id": 5,
@@ -36,7 +36,7 @@
     "common_name": "Sumatran Elephant",
     "subpopulation": "2800",
     "habitat": "xxx",
-    "image": ""
+    "image": "as_id_05.jpg"
   },
   {
     "id": 6,
@@ -44,7 +44,7 @@
     "common_name": "Red-headed Vulture",
     "subpopulation": "10000",
     "habitat": "xxx",
-    "image": ""
+    "image": "as_id_06.jpg"
   },
   {
     "id": 7,
@@ -52,16 +52,16 @@
     "common_name": "Sumatran Orangutan",
     "subpopulation": "13000",
     "habitat": "xxx",
-    "image": ""
+    "image": "as_id_07.jpg"
   },
 
   {
     "id": 8,
     "scientific_name":"Nomascus nasutus",
-    "common_name": "Easter Black Crested Gibbon",
+    "common_name": "Eastern Black Crested Gibbon",
     "subpopulation": "30",
     "habitat": "xxx",
-    "image": ""
+    "image": "as_id_08.jpg"
   },
   {
     "id": 9,
@@ -69,7 +69,7 @@
     "common_name": "Wild Bactrian Camel",
     "subpopulation": "1100",
     "habitat": "xxx",
-    "image": ""
+    "image": "as_id_09.jpg"
   },
   {
     "id": 10,
@@ -77,6 +77,6 @@
     "common_name": "Java Rhinoceros",
     "subpopulation": "76",
     "habitat": "xxx",
-    "image": ""
+    "image": "as_id_10.jpg"
   }  
 ]}

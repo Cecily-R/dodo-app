@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&family=Rubik+Gemstones&family=Sanchez:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;800&family=VT323&display=swap');
+
 
 body {
   height: 100%;
@@ -11,14 +13,18 @@ body {
 }
 
 header {
-  padding-top: 10px;
+  padding-top: 0px;
 }
 
 h1 {
   margin: 0;
   text-align: center;
   color: #12126d;
-  font-family: "Rubik Gemstones";
+  font-family: "Quicksand";
+}
+
+h2 {
+  text-align: center;
 }
 
 .navbar .breakingNewsButton {
@@ -26,7 +32,7 @@ h1 {
   border: 0;
   color: #12126d;
   background-color: ffff; 
-  font-family: "Sanchez";
+  font-family: "Quicksand";
   size: 200px;
   border-radius: 4px;
   padding: 10px;
@@ -39,10 +45,60 @@ h1 {
   color: #12126d;
   background-color: ffff; 
   padding: 10px;
-  font-family: "Sanchez";
+  font-family: "Quicksand";
   size: 200px;
   border-radius: 4px;
   position: center;
+  cursor: pointer;
+}
+
+header .navbar {
+  background: #496a81;
+  border: 0;
+  color: #12126d;
+  background-color: ffff; 
+  padding: 10px;
+  font-family: "Quicksand";
+  position: relative;
+  size: 200px;
+  border-radius: 0px;
+
+  align-items: center;
+}
+
+.navbar img {
+  padding-left: 20px;
+}
+
+.navbar a {
+  color: white;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.navbar img {
+  align-items: center;
+  margin: 10px;
+}
+
+.navbar li {
+  list-style-type: none;
+  margin: 10px;
+  color: white;
+  font-weight: 900;
+  cursor: pointer;
+  font-family: Quicksand;
+}
+
+.navbar button {
+  background-color: #66999b;
+  color: white;
+  font-family: "Quicksand";
+  font-weight: auto;
+  font-size: medium;
+  border: 0;
+  box-shadow: none;
+  border-radius: 4px;
   cursor: pointer;
 }
 
@@ -60,27 +116,41 @@ h1 {
 }
 
 .sidebar-wrapper {
-  background-color: #ffc47d; 
+  background-color: #66999b; 
   width: 20%;
+  height: 600px;
   position: relative;
   float: left;
-  font-family: "Sanchez";
+  font-family: "Quicksand";
   font-size: 0.9em;
-  color: #12126d;
+  color: white;
+  margin-top: 8px;
   margin-left: 8px;
   margin-bottom: 8px;
   padding: 1em;
-  border-radius: 25px;
-  padding-left: 40px
+  border-radius: 8px;
+  padding-left: 15px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-color: #66999b;
+  /* scrollbar-arrow-color: #66999b;
+  scrollbar-3dlight-color: #66999b;
+  scrollbar-base-color: #66999b;
+  scrollbar-darkshadow-color: #66999b;
+  scrollbar-highlight-color: #66999b ;
+  scrollbar-gutter: 0px; */
 }
 
 .footer {
-  color: #12126d;
-  font-family: "Sanchez";
+  background: #496a81;
+  color: white;
+  font-family: "Quicksand";
   font-size: 15px;
-  border-radius: 4px;
+  border-radius: 0px;
   padding: 10px;
+  padding-bottom: 30px;
   text-align: center;
+  margin-bottom: 0px;
 }
 
 #countryOrContinentButton {
@@ -88,9 +158,31 @@ h1 {
   color: #12126d; 
   padding: 7px;
   margin-right: 10px;
-  font-family: "Sanchez";
+  font-family: "Quicksand";
   size: 200px;
   border-radius: 4px;
   cursor: pointer;
   float: right;
+}
+
+.animalInfo {
+  background-color: #88ab75;
+  color: white;
+  max-width: auto 0;
+  border-radius: 8px;
+  /* padding: 20px; */
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  margin-bottom: 5px;
+}
+
+.vertical-center {
+  margin: 0px;
+  margin-top: 50px;
+  position: relative;
+  float: right;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }

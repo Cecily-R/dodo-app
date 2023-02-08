@@ -7,7 +7,7 @@
 			"common_name": "Black Rhinoceros",
 			"subpopulation": "2056",
 			"habitat": "xxx",
-			"image": ""
+			"image": "af_id_01.jpg"
 		},
 		{
 			"id": 2,
@@ -15,7 +15,7 @@
 			"common_name": "African Elephant",
 			"subpopulation": "415000",
 			"habitat": "xxx",
-			"image": ""
+			"image": "af_id_02.jpg"
 		},
 		{
 			"id": 3,
@@ -23,7 +23,7 @@
 			"common_name": "Eastern Gorilla",
 			"subpopulation": "6800",
 			"habitat": "xxx",
-			"image": ""
+			"image": "af_id_03.jpg"
 		},
 		{
 			"id": 4,
@@ -31,7 +31,7 @@
 			"common_name": "Saharan Cheetah",
 			"subpopulation": "8000",
 			"habitat": "xxx",
-			"image": ""
+			"image": "af_id_04.jpg"
 		},
 		{
 			"id": 5,
@@ -39,7 +39,7 @@
 			"common_name": "African Wild Dog",
 			"subpopulation": "6600",
 			"habitat": "xxx",
-			"image": ""
+			"image": "af_id_05.jpg"
 		},
 		{
 			"id": 6,
@@ -47,7 +47,7 @@
 			"common_name": "Scimitar-horned Oryx",
 			"subpopulation": "400",
 			"habitat": "xxx",
-			"image": ""
+			"image": "af_id_06.jpg"
 		},
 		{
 			"id": 7,
@@ -55,7 +55,7 @@
 			"common_name": "Mountain Nyala",
 			"subpopulation": "4000",
 			"habitat": "xxx",
-			"image": ""
+			"image": "af_id_07.jpg"
 		},
 
 		{
@@ -64,7 +64,7 @@
 			"common_name": "Dama Gazelle",
 			"subpopulation": "400",
 			"habitat": "xxx",
-			"image": ""
+			"image": "af_id_08.jpg"
 		},
 		{
 			"id": 9,
@@ -72,7 +72,7 @@
 			"common_name": "Greater Bamboo Lemur",
 			"subpopulation": "160",
 			"habitat": "xxx",
-			"image": ""
+			"image": "af_id_09.jpg"
 		},
 		{
 			"id": 10,
@@ -80,7 +80,7 @@
 			"common_name": "African Golden Cat",
 			"subpopulation": "10000",
 			"habitat": "xxx",
-			"image": ""
+			"image": "af_id_10.jpg"
 		}
 	]
 }
