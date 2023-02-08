@@ -162,6 +162,10 @@ header .navbar {
   float: right;
 }
 
+.storyLink {
+  color: none;
+}
+
 .animalInfo {
   background-color: #88ab75;
   color: white;

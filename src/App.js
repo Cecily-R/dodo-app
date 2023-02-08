@@ -8,6 +8,7 @@ function App() {
   const [sidebarContent, setSidebarContent] = useState();
   const [sidebarAnimals, setSidebarAnimals] = useState();
   const [showNews, setShowNews] = useState(false);
+  const [showAnimals, setShowAnimals] = useState(false);
 
   return (
     <>
@@ -15,10 +16,10 @@ function App() {
       <Navbar showNews={showNews} setShowNews={setShowNews} />
       <div className="flex-container">
         <div className="sidebar-wrapper">
-          <Sidebar sidebarContent={sidebarContent} sidebarAnimals={sidebarAnimals} showNews={showNews}/>
+          <Sidebar sidebarContent={sidebarContent} sidebarAnimals={sidebarAnimals} showNews={showNews} showAnimals={showAnimals} setShowAnimals={setShowAnimals}/>
         </div>
         <div className="map-wrapper">
-          <Map setSidebarContent={setSidebarContent} setSidebarAnimals={setSidebarAnimals}/>
+          <Map setSidebarContent={setSidebarContent} setSidebarAnimals={setSidebarAnimals} showAnimals={showAnimals} setShowAnimals={setShowAnimals}/>
         </div>
       </div>
     </div>

@@ -4,6 +4,7 @@ import logo from "./images/dodo.png";
 const Navbar = (props) => {
   function handleClick() {
     props.setShowNews(!props.showNews)
+    props.setShowAnimal(!props.showAnimals)
   };
 
   return (
