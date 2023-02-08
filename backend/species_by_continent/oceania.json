@@ -4,7 +4,7 @@
   "common_name": "Koala",
   "subpopulation": "50000",
   "habitat": "xxx",
-  "image": ""
+  "image": "oc_id_01.jpg"
   },
   {
     "id": 2,
@@ -12,7 +12,7 @@
     "common_name": "Mountain Pygmy Possum",
     "subpopulation": "2000",
     "habitat": "xxx",
-    "image": ""
+    "image": "oc_id_02.jpg"
   },
   {
     "id": 3,
@@ -20,7 +20,7 @@
     "common_name": "Long-footed Potoroo",
     "subpopulation": "2000",
     "habitat": "xxx",
-    "image": ""
+    "image": "oc_id_03.jpg"
   },
   {
     "id": 4,
@@ -28,7 +28,7 @@
     "common_name": "Greater Glider",
     "subpopulation": "50000",
     "habitat": "xxx",
-    "image": ""
+    "image": "oc_id_04.jpg"
   },
   {
     "id": 5,
@@ -36,7 +36,7 @@
     "common_name": "Numbat",
     "subpopulation": "1000",
     "habitat": "xxx",
-    "image": ""
+    "image": "oc_id_05.jpg"
   },
   {
     "id": 6,
@@ -44,7 +44,7 @@
     "common_name": "Regent Honeyeater",
     "subpopulation": "1500",
     "habitat": "xxx",
-    "image": ""
+    "image": "oc_id_06.jpg"
   },
   {
     "id": 7,
@@ -52,7 +52,7 @@
     "common_name": "Orange-bellied Parrot",
     "subpopulation": "50",
     "habitat": "xxx",
-    "image": ""
+    "image": "oc_id_07.jpg"
   },
 
   {
@@ -61,7 +61,7 @@
     "common_name": "Eastern Quoll",
     "subpopulation": "10000",
     "habitat": "xxx",
-    "image": ""
+    "image": "oc_id_08.jpg"
   },
   {
     "id": 9,
@@ -69,7 +69,7 @@
     "common_name": "Eastern Curlew",
     "subpopulation": "32000",
     "habitat": "xxx",
-    "image": ""
+    "image": "oc_id_09.jpg"
   },
   {
     "id": 10,
@@ -77,6 +77,6 @@
     "common_name": "Woylie",
     "subpopulation": "15000",
     "habitat": "xxx",
-    "image": ""
+    "image": "oc_id_10.jpg"
   }  
 ]}

@@ -1,13 +1,22 @@
 import React from "react"
 
+const images = importAll(require.context('./images', false, /\.(png|jpe?g|svg)$/));
+
+function importAll(r) {
+  let images = {};
+   r.keys().forEach((item, index) => { images[item.replace('./', '')] = r(item); });
+  return images
+ }
+ 
+
 const Animal = (animal) => {
   return (
     <div className="animalInfo">
-      <p>{animal.animal.common_name}</p>
+      <h3>{animal.animal.common_name}</h3>
       <p>{animal.animal.scientific_name}</p>
       <p>{animal.animal.subpopulation}</p>
       <p>{animal.animal.habitat}</p>
-      <p>{animal.animal.image}</p>
+      <img src={ images } alt=""/>
     </div>
   );
 };
