@@ -29,18 +29,18 @@ const Map = ({setSidebarContent, setSidebarAnimals}) => {
   };
 
   function handleCountryClick() {
-    if (buttonText === 'continents') {
-      setButtonText('countries');
+    if (buttonText === 'Continents') {
+      setButtonText('Countries');
       setGeoURL("https://raw.githubusercontent.com/deldersveld/topojson/master/world-continents.json");
     } else {
-      setButtonText('continents');
+      setButtonText('Continents');
       setGeoURL("https://raw.githubusercontent.com/lotusms/world-map-data/main/world.json");
     };
   };
 
   return (
     <div className="Map">
-    <button id="countryOrContinentButton" onClick={handleCountryClick} ref={areaSwitchButton}>{buttonText || 'continents'}</button>     
+    <button id="countryOrContinentButton" onClick={handleCountryClick} ref={areaSwitchButton}>{buttonText || 'Continents'}</button>     
       <ComposableMap width={width} height={height} projection={projection} position="relative">
       <ZoomableGroup translateExtent={[[0, 0], [width, height]]}>
             <Geographies geography={geoURL}>

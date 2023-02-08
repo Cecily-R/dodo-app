@@ -11,11 +11,9 @@ const Navbar = (props) => {
       <nav className="navbar">
         <img src={logo} alt="logo" />
           <div className="vertical-center"> 
-            <button className="breakingNewsButton" onClick={handleClick}>
-              Breaking News
-                </button>
-              <button className="resourcesButton">Make a Donation</button>
-            </div>
+            <button className="breakingNewsButton" onClick={handleClick}>Breaking News</button>
+            <button className="resourcesButton">Make a Donation</button>
+          </div>
         </nav>
       </header>
   );
