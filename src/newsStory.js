@@ -7,7 +7,7 @@ const NewsStory = (props) => {
     <div className='news-story'>
       {console.log(story)}
       <h3>
-        <a href={story.url} target='_blank'>{story.title}</a>
+        <a href={story.url} target='_blank' rel="noreferrer">{story.title} </a>
       </h3>
       <span className='news-author'>{story.author}</span>
     </div>

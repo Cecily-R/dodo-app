@@ -11,7 +11,7 @@
     "scientific_name":"Mimus trifasciatus",
     "common_name": "Floreana Mockingbird",
     "subpopulation": "750",
-    "habitat": "xxx",
+    "habitat": "Scrub",
     "image": "sa_id_02.jpg"
   },
   {
@@ -19,7 +19,7 @@
     "scientific_name":"Lagidium ahuacaense",
     "common_name": "Mountain Viscacha",
     "subpopulation": "100",
-    "habitat": "Mountain",
+    "habitat": "Mountains",
     "image": "sa_id_03.jpg"
   },
   {
@@ -51,7 +51,7 @@
     "scientific_name":"Tapirus terrestris",
     "common_name": "South American Tapir",
     "subpopulation": "4500",
-    "habitat": "xxx",
+    "habitat": "Rainforest / Wetlands",
     "image": "sa_id_07.jpg"
   },
 
@@ -60,7 +60,7 @@
     "scientific_name":"Inia geoffrensis",
     "common_name": "Pink Amazon Dolphin",
     "subpopulation": "130",
-    "habitat": "xxx",
+    "habitat": "River Basins",
     "image": "sa_id_08.jpg"
   },
   {
@@ -68,7 +68,7 @@
     "scientific_name":"Cebus xanthosternos",
     "common_name": "Buff-headed Capuchin",
     "subpopulation": "2499",
-    "habitat": "xxx",
+    "habitat": "Rainforest",
     "image": "sa_id_09.jpg"
   },
   {
@@ -76,7 +76,7 @@
     "scientific_name":"Pudu pudu",
     "common_name": "Pudu",
     "subpopulation": "10000",
-    "habitat": "xxx",
+    "habitat": "Rainforest",
     "image": "sa_id_10.jpg"
   }  
 ]}
