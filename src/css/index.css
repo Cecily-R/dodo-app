@@ -31,26 +31,60 @@ h2 {
 .navbar .breakingNewsButton {
   background: var(--primary);
   border: 0;
-  color: #12126d;
-  background-color: ffff; 
+  color: white;
+  background-color:#88ab75;
   font-family: "Quicksand";
+  font-weight: auto;
+  font-size: medium;
   size: 200px;
   border-radius: 4px;
   padding: 10px;
   cursor: pointer;
+  margin-right: 10px;
+}
+.navbar .breakingNewsButton:hover {
+  background: var(--primary);
+  border: 1px;
+  color: white;
+  background-color: #548c36;
+  font-family: "Quicksand";
+  font-weight: auto;
+  font-size: medium;
+  size: 200px;
+  border-radius: 4px;
+  padding: 10px;
+  cursor: pointer;
+  margin-right: 10px;
 }
 
 .navbar .resourcesButton {
   background: var(--primary);
   border: 0;
-  color: #12126d;
-  background-color: ffff; 
+  color: white;
+  background-color: #88ab75;
   padding: 10px;
   font-family: "Quicksand";
+  font-weight: auto;
+  font-size: medium;
   size: 200px;
   border-radius: 4px;
   position: center;
   cursor: pointer;
+  margin-right: 10px;
+}
+.navbar .resourcesButton:hover {
+  background: var(--primary);
+  border: 0;
+  color: white;
+  background-color:#548c36;
+  font-family: "Quicksand";
+  font-weight: auto;
+  font-size: medium;
+  size: 200px;
+  border-radius: 4px;
+  padding: 10px;
+  cursor: pointer;
+  margin-right: 10px;
 }
 
 header .navbar {
@@ -69,44 +103,40 @@ header .navbar {
 
 .navbar img {
   padding-left: 20px;
-}
-
-.navbar a {
-  color: white;
-  margin-right: 10px;
-  margin-left: 10px;
-}
-
-.navbar img {
-  align-items: center;
   margin: 10px;
 }
 
-.navbar li {
+/* .navbar a {
+  color: white;
+  margin-right: 10px;
+  margin-left: 10px;
+} */
+
+/* .navbar li {
   list-style-type: none;
   margin: 10px;
   color: white;
   font-weight: 900;
   cursor: pointer;
   font-family: Quicksand;
-}
+} */
 
-.navbar button {
-  background-color: #66999b;
+/* .navbar button {
+  background-color: #88ab75;
   color: white;
   font-family: "Quicksand";
   font-weight: auto;
   font-size: medium;
-  border: 0;
+  border: 0px;
   box-shadow: none;
   border-radius: 4px;
   cursor: pointer;
-}
+} */
 
-.navbar ul {
+/* .navbar ul {
   list-style-type: none;
   margin: 0;
-}
+} */
 
 .map-wrapper {
   width: 80%;
@@ -126,7 +156,7 @@ header .navbar {
 .sidebar-wrapper {
   background-color: #66999b; 
   width: 20%;
-  height:600px; 
+  height: 650px;
   position: relative;
   float: left;
   font-family: "Quicksand";
@@ -161,6 +191,7 @@ a:hover {
 }
 
 .footer {
+  position: relative;
   background: #496a81;
   color: white;
   font-family: "Quicksand";
@@ -172,13 +203,32 @@ a:hover {
 }
 
 #countryOrContinentButton {
-  background: #ffc47d;
-  color: #12126d; 
+  width: 148px;
+  background: #0e652b;
+  border: 0;
+  color: white; 
   padding: 7px;
-  margin-top: 10px;
-  margin-right: 10px;
+  margin-right: 20px;
+  margin-top: 8px;
   font-family: "Quicksand";
+  font-weight: bold;
+  font-size: medium;
   size: 200px;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+#countryOrContinentButton:hover {
+  width: 148px;
+  background: #88ab75;
+  color: white; 
+  padding: 7px;
+  margin-right: 20px;
+  margin-top: 8px;
+  font-family: "Quicksand";
+  font-weight: bold;
+  /* size: 200px; */
   border-radius: 4px;
   cursor: pointer;
   float: right;
@@ -203,4 +253,9 @@ a:hover {
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+.animalInfo img {
+  border-color: white;
+  border: 10px;
 }

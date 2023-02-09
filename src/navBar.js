@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./images/dodo.png";
+import logo from "./css/dodo.png";
 
 const Navbar = (props) => {
   function handleClick() {
@@ -11,7 +11,7 @@ const Navbar = (props) => {
   return (
     <header>
       <nav className="navbar">
-        <img src={logo} alt="logo" />
+        <img src={ logo } alt="Logo" />
           <div className="vertical-center"> 
             <button className="breakingNewsButton" onClick={handleClick}>
               Breaking News
