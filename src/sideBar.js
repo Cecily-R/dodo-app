@@ -3,7 +3,6 @@ import {useEffect} from 'react'
 import News from './News'
 import Animal from './animal' 
 
-const Sidebar = ({sidebarContent, sidebarAnimals, sidebarCountry, , setGroupSelection, setStatusSelection}) => {
 const Sidebar = ({sidebarContent, sidebarAnimals, sidebarCountry, buttonText, setGroupSelection, setStatusSelection, showAnimals, showNews}) => {
   const statusList = ["DD", "LC", "NT", "VU", "EN", "CR", "EW", "EX"]
   const groupList = ["reef_building_corals","chameleons","mammals","mangrove_plants","seagrasses","cycads","blennies","cone_snails","magnolias","seasnakes","fw_caridean_shrimps","fw_crayfish","tunas_and_billfishes","butterfly_fishes","groupers","pufferfishes","conifers","surgeonfishes","birds","crocodiles_and_alligators","sharks_and_rays","fw_crabs","cacti","tarpons_and_ladyfishes","sturgeons","angelfishes","lobsters","amphibians","seabreams_porgies_picarels","hagfishes","wrasses_and_parrotfishes"]
