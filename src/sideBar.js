@@ -52,7 +52,7 @@ const Sidebar = ({sidebarContent, sidebarAnimals, sidebarCountry, buttonText, se
 
   return (
     <>
-    <p>{sidebarContent}</p>
+    <h2>{sidebarContent}</h2>
     {sidebarAnimals !== undefined && showAnimals === true
      ? sidebarAnimals.result.sort().map((animal, i) => {return <Animal key={i} animal={animal}/>})
       : null}

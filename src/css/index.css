@@ -20,12 +20,15 @@ header {
 h1 {
   margin: 0;
   text-align: center;
-  color: #12126d;
+  color: white;
+
   font-family: "Quicksand";
 }
 
 h2 {
   text-align: center;
+  color: white;
+  margin-bottom: 20px;
 }
 
 .navbar .breakingNewsButton {
@@ -203,12 +206,12 @@ a:hover {
 }
 
 #countryOrContinentButton {
-  width: 148px;
+  width: 132px;
   background: #0e652b;
   border: 0;
   color: white; 
   padding: 7px;
-  margin-right: 20px;
+  margin-right: 19px;
   margin-top: 8px;
   font-family: "Quicksand";
   font-weight: bold;
@@ -220,11 +223,11 @@ a:hover {
 }
 
 #countryOrContinentButton:hover {
-  width: 148px;
+  width: 132px;
   background: #88ab75;
   color: white; 
   padding: 7px;
-  margin-right: 20px;
+  margin-right: 19px;
   margin-top: 8px;
   font-family: "Quicksand";
   font-weight: bold;

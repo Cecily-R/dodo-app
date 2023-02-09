@@ -25,7 +25,7 @@ const Map = ({setSidebarContent, setSidebarAnimals, setSidebarCountry, groupSele
 
   const handleClick = (geo) => () => {
     const selectedArea = areaSwitchButton.current.textContent
-    const countryOrContinent = selectedArea === 'continents' ? geo.properties.name : geo.properties.continent
+    const countryOrContinent = selectedArea === 'Continents' ? geo.properties.name : geo.properties.continent
     const client = new ApiClient();
     const redlist = new RedlistModel();
     setIso(geo.properties["Alpha-2"])
@@ -35,7 +35,7 @@ const Map = ({setSidebarContent, setSidebarAnimals, setSidebarCountry, groupSele
     setShowAnimals(true);
     setShowNews(false);
 
-    selectedArea !== 'continents'
+    selectedArea !== 'Continents'
       ? client.fetchAnimalsBySelectedArea(countryOrContinent, setSidebarAnimals)
       : redlist.test(geo.properties["Alpha-2"], groupSelection, statusSelection, setSidebarCountry, sidebarCountry)
   };
