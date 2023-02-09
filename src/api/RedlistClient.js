@@ -2,31 +2,32 @@
 const URL = 'https://apiv3.iucnredlist.org/api/v3/'
 const token = '11a48c54be73c4330849e89a168673c2857782d9983f84e3498506410e585a5d'
 
-//const [countryData, setCountryData] = setState([])
-
 class RedListClient {
   constructor() {
     this.list = []
   }
 
-  fetchSpeciesByCountry(country, setSidebarContent) {
-    const mostEndangered = []
+  fetchSpeciesByCountry(country, callback) {
     const fullUrl = URL + "country/getspecies/" + country + "?token=" + token;
-    fetch(fullUrl)
+    let promise = fetch(fullUrl)
       .then((res) => res.json())
-      .then((data) => {data.result.forEach(animal => {if (animal.category === "CR") mostEndangered.push(animal.scientific_name)})})
-      .then(() => console.log(mostEndangered))
-      .then(() => {setSidebarContent()})
-      .then(() => {mostEndangered.forEach(animal => this.fetchSpeciesInfo(animal))})
-   
+      .then((data) => {callback(data)})
+    return promise    
   }
 
-  fetchSpeciesInfo(s_name) {
-    const fullUrl = URL + "species/" + s_name + "?token=" + token;
-    fetch(fullUrl)
+  fetchSpeciesInfo(scientificName) {
+    const fullUrl = URL + "species/" + scientificName + "?token=" + token;
+    let promise = fetch(fullUrl)
       .then((res) => res.json())
-      .then((data) => this.list.push(data.result))
-      .then(() => console.log(this.list))
+    return promise 
+  }
+
+  fetchSpeciesByGroup(group, callback) {
+    const fullUrl = URL + "comp-group/getspecies/" + group + "?token=" + token;
+    let promise = fetch(fullUrl)
+      .then((res) => res.json())
+      .then((data) => {callback(data)})
+    return promise
   }
 }
 
