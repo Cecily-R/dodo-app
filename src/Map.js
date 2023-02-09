@@ -25,17 +25,18 @@ const Map = ({setSidebarContent, setSidebarAnimals, setSidebarCountry, groupSele
 
   const handleClick = (geo) => () => {
     const selectedArea = areaSwitchButton.current.textContent
-    const countryOrContinent = selectedArea === 'continents' ? geo.properties.name : geo.properties.continent
+    const countryOrContinent = selectedArea === 'Continents' ? geo.properties.name : geo.properties.continent
     const client = new ApiClient();
     const redlist = new RedlistModel();
     setIso(geo.properties["Alpha-2"])
 
     setSelectedArea(countryOrContinent);
+    console.log(selectedArea)
     setSidebarContent(countryOrContinent);
     setShowAnimals(true);
     setShowNews(false);
 
-    selectedArea !== 'continents'
+    selectedArea !== 'Continents'
       ? client.fetchAnimalsBySelectedArea(countryOrContinent, setSidebarAnimals)
       : redlist.test(geo.properties["Alpha-2"], groupSelection, statusSelection, setSidebarCountry, sidebarCountry)
   };
@@ -63,7 +64,7 @@ const Map = ({setSidebarContent, setSidebarAnimals, setSidebarCountry, groupSele
 
   return (
     <div className="Map">
-    <button id="countryOrContinentButton" onClick={handleCountryClick} ref={areaSwitchButton}>{buttonText || 'Continents'}</button>     
+    <button id="countryOrContinentButton" onClick={handleCountryClick} ref={areaSwitchButton}>{buttonText}</button>     
       <ComposableMap width={width} height={height} projection={projection} position="relative" >
       <ZoomableGroup translateExtent={[[0, 0], [width, height]]}>
             <Geographies geography={geoURL}>

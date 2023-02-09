@@ -12,7 +12,7 @@ function App() {
   const [groupSelection, setGroupSelection] = useState("amphibians")
   const [statusSelection, setStatusSelection] = useState("EX")
   const [sidebarCountry, setSidebarCountry] = useState()
-  const [buttonText, setButtonText] = useState('countries');
+  const [buttonText, setButtonText] = useState('Countries');
   const [showNews, setShowNews] = useState(false);
   const [showAnimals, setShowAnimals] = useState(false);
 

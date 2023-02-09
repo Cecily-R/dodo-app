@@ -57,11 +57,11 @@ const Sidebar = ({sidebarContent, sidebarAnimals, sidebarCountry, buttonText, se
      ? sidebarAnimals.result.sort().map((animal, i) => {return <Animal key={i} animal={animal}/>})
       : null}
     {showNews ? <News />: null}
-    {sidebarCountry !== undefined 
+    {sidebarCountry !== undefined && showAnimals === true
       ? sidebarCountry.map((animal) => {return (<p>{animal.result[0].main_common_name}</p>)})
       : <p></p>}
-    <p>{buttonText === 'continents' && groupDropdown}</p>
-    <p>{buttonText === 'continents' && statusDropdown}</p>
+    <p>{buttonText === 'Continents' && groupDropdown}</p>
+    <p>{buttonText === 'Continents' && statusDropdown}</p>
     </>
   )}
  
