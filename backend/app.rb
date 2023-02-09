@@ -7,7 +7,7 @@ require "sinatra/cors"
 class Application < Sinatra::Base
   register Sinatra::Cors
 
-  set :allow_origin, "http://localhost:3001"
+  set :allow_origin, "http://localhost:3000"
   set :allow_methods, "GET,HEAD,POST"
   set :allow_headers, "content-type,if-modified-since"
   set :expose_headers, "location,link"
@@ -25,4 +25,3 @@ class Application < Sinatra::Base
   end
 end
 
-Application.run!

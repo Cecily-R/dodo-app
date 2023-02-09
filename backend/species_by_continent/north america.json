@@ -4,56 +4,56 @@
   "scientific_name":"Canis rufus",
   "common_name": "Red Wolf",
   "subpopulation": "21",
-  "habitat": "xxx",
-  "image": ""
+  "habitat": "Forest / Wetlands",
+  "image": "./images/na_id_01.jpg"
   },
   {
     "id": 2,
     "scientific_name":"Leopardus pardalis",
     "common_name": "Ocelot",
     "subpopulation": "35",
-    "habitat": "xxx",
-    "image": ""
+    "habitat": "Rainforest",
+    "image": "./images/na_id_02.jpg"
   },
   {
     "id": 3,
     "scientific_name":"Athene cunicularia",
     "common_name": "Burrowing Owl",
     "subpopulation": "10000",
-    "habitat": "xxx",
-    "image": ""
+    "habitat": "Grassland / Desert",
+    "image": "./images/na_id_03.jpg"
   },
   {
     "id": 4,
     "scientific_name":"Trichechus manatus",
     "common_name": "Florida Manatee",
     "subpopulation": "7500",
-    "habitat": "xxx",
-    "image": ""
+    "habitat": "River",
+    "image": "./images/na_id_04.jpg"
   },
   {
     "id": 5,
     "scientific_name":"Gymnogyps californianus",
     "common_name": "California Condor",
     "subpopulation": "336",
-    "habitat": "xxx",
-    "image": ""
+    "habitat": "Desert",
+    "image": "./images/na_id_05.jpg"
   },
   {
     "id": 6,
     "scientific_name":"Puma concolor",
     "common_name": "Cougar",
     "subpopulation": "20000",
-    "habitat": "xxx",
-    "image": ""
+    "habitat": "Mountain",
+    "image": "./images/na_id_06.jpg"
   },
   {
     "id": 7,
     "scientific_name":"Urocyon littoralis",
     "common_name": "Island Fox",
     "subpopulation": "2300",
-    "habitat": "xxx",
-    "image": ""
+    "habitat": "Grassland",
+    "image": "./images/na_id_07.jpg"
   },
 
   {
@@ -61,23 +61,23 @@
     "scientific_name":"Vulpes velox",
     "common_name": "Northern Swift Fox",
     "subpopulation": "870",
-    "habitat": "xxx",
-    "image": ""
+    "habitat": "Shortgrass Prairie",
+    "image": "./images/na_id_08.jpg"
   },
   {
     "id": 9,
     "scientific_name":"Enhydra lutris",
     "common_name": "Sea Otter",
     "subpopulation": "3000",
-    "habitat": "xxx",
-    "image": ""
+    "habitat": "Coastline / Kelp Forests",
+    "image": "./images/na_id_09.jpg"
   },
   {
     "id": 10,
     "scientific_name":"Marmota vancouverensis",
     "common_name": "Vancouver Island Marmot",
     "subpopulation": "250",
-    "habitat": "xxx",
-    "image": ""
+    "habitat": "Subalpine Meadows",
+    "image": "./images/na_id_10.jpg"
   }  
 ]}

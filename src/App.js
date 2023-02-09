@@ -1,21 +1,25 @@
+
 import Map from './Map.js';
 import Navbar from './navBar.js';
 import Sidebar from './sideBar.js'
 import Footer from './footer.js';
 import React, {useState, useEffect} from 'react';
 
+
 function App() {
-  const [sidebarContent, setSidebarContent] = useState("");
+  const [sidebarContent, setSidebarContent] = useState('Click the map!');
   const [sidebarAnimals, setSidebarAnimals] = useState();
   const [groupSelection, setGroupSelection] = useState("amphibians")
   const [statusSelection, setStatusSelection] = useState("EX")
   const [sidebarCountry, setSidebarCountry] = useState()
   const [buttonText, setButtonText] = useState('countries');
+  const [showNews, setShowNews] = useState(false);
+  const [showAnimals, setShowAnimals] = useState(false);
 
   return (
     <>
     <div id='background'>
-      <Navbar />
+      <Navbar showNews={showNews} setShowNews={setShowNews} setShowAnimals={setShowAnimals} setSidebarContent={setSidebarContent} />
       <div className="flex-container">
         <div className="sidebar-wrapper">
           <Sidebar 
@@ -25,6 +29,9 @@ function App() {
             buttonText={buttonText} 
             setGroupSelection={setGroupSelection}
             setStatusSelection={setStatusSelection}
+            showNews={showNews}
+            showAnimals={showAnimals}
+            setShowAnimals={setShowAnimals}
           />
         </div>
         <div className="map-wrapper">
@@ -37,6 +44,9 @@ function App() {
             groupSelection={groupSelection}
             statusSelection={statusSelection}
             sidebarCountry={sidebarCountry}
+            setShowNews={setShowNews}
+            showAnimals={showAnimals}
+            setShowAnimals={setShowAnimals}
           />
         </div>
       </div>

@@ -1,16 +1,24 @@
-const Navbar = () => {
+import React from "react";
+import logo from "./css/dodo.png";
+
+const Navbar = (props) => {
+  function handleClick() {
+    props.setShowNews(!props.showNews)
+    props.setShowAnimals(false)
+    props.setSidebarContent('Breaking News')
+  };
+
   return (
     <header>
-      <h1>dodo.</h1>
       <nav className="navbar">
-        <ul>
-          <li>
-            <button className="breakingNewsButton">breaking news.</button >
-            <button className="resourcesButton">donate here.</button >
-          </li>
-        </ul>
-      </nav>
-    </header>
+        <img src={ logo } alt="Logo" />
+          <div className="vertical-center"> 
+            <button className="breakingNewsButton" onClick={handleClick}>
+              Breaking News
+                </button>
+            </div>
+        </nav>
+      </header>
   );
 }
  

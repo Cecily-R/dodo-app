@@ -12,7 +12,8 @@ const projection = geoPatterson()
   .translate([width / 2, height / 1.8])
   .scale(128);
 
-const Map = ({setSidebarContent, setSidebarAnimals, setSidebarCountry, setButtonText, buttonText, groupSelection, statusSelection, sidebarCountry}) => {
+
+const Map = ({setSidebarContent, setSidebarAnimals, setSidebarCountry, groupSelection, setButtonText, buttonText, statusSelection, sidebarCountry, setShowAnimals, setShowNews}) => {
   const areaSwitchButton = useRef(null);
   const [geoURL, setGeoURL] = useState("https://raw.githubusercontent.com/deldersveld/topojson/master/world-continents.json");
   const [_, setSelectedArea] = useState();
@@ -31,6 +32,8 @@ const Map = ({setSidebarContent, setSidebarAnimals, setSidebarCountry, setButton
 
     setSelectedArea(countryOrContinent);
     setSidebarContent(countryOrContinent);
+    setShowAnimals(true);
+    setShowNews(false);
 
     selectedArea !== 'continents'
       ? client.fetchAnimalsBySelectedArea(countryOrContinent, setSidebarAnimals)
@@ -45,13 +48,13 @@ const Map = ({setSidebarContent, setSidebarAnimals, setSidebarCountry, setButton
   }, [sidebarCountry])
 
   function handleCountryClick() {
-    if (buttonText === 'continents') {
-      setButtonText('countries');
+    if (buttonText === 'Continents') {
+      setButtonText('Countries');
       setGeoURL("https://raw.githubusercontent.com/deldersveld/topojson/master/world-continents.json");
       setSidebarContent()
       setSidebarCountry()
     } else {
-      setButtonText('continents');
+      setButtonText('Continents');
       setGeoURL("https://raw.githubusercontent.com/lotusms/world-map-data/main/world.json");
       setSidebarContent()
       setSidebarAnimals()
@@ -60,7 +63,7 @@ const Map = ({setSidebarContent, setSidebarAnimals, setSidebarCountry, setButton
 
   return (
     <div className="Map">
-    <button id="countryOrContinentButton" onClick={handleCountryClick} ref={areaSwitchButton}>{buttonText}</button>     
+    <button id="countryOrContinentButton" onClick={handleCountryClick} ref={areaSwitchButton}>{buttonText || 'Continents'}</button>     
       <ComposableMap width={width} height={height} projection={projection} position="relative" >
       <ZoomableGroup translateExtent={[[0, 0], [width, height]]}>
             <Geographies geography={geoURL}>
