@@ -1,7 +1,9 @@
 
 import {useEffect} from 'react'
 import News from './News'
-import Animal from './animal' 
+import Animal from './animal'
+import Loader from 'react-dots-loader'
+import 'react-dots-loader/index.css'
 
 const Sidebar = ({noneFound, loadingAPI, sidebarContent, sidebarAnimals, sidebarCountry, buttonText, setGroupSelection, setStatusSelection, showAnimals, showNews}) => {
   const statusList = [
@@ -66,7 +68,7 @@ const Sidebar = ({noneFound, loadingAPI, sidebarContent, sidebarAnimals, sidebar
         <h3 className='animalTypeDropdown'>{buttonText === 'Continents' && groupDropdown}</h3>
         <h3 className="animalStatusDropdown">{buttonText === 'Continents' && statusDropdown}</h3>
       </div> : null }
-      {showNews == false && loadingAPI && <p id='loadingMs'>Loading...</p>}
+      {showNews == false && loadingAPI && <p id='loadingMs'><Loader size={10} color="white"/></p>}
       {showNews == false && noneFound && <p id='noSearchMatchesMs'>No species match your criteria.</p>}
   
 
