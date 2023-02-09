@@ -8,7 +8,7 @@ const News = () => {
   const date = new Date().toISOString().split('T')[0]
   const apiKey = 'da86dadbff91415699979cdc79e21197';
 
-  const newsApiURL = 'https://newsapi.org/v2/everything?q=endangered species&from=' + `${date}` + '&sortBy=popularity&apiKey=' + `${apiKey}`
+  const newsApiURL = 'https://newsapi.org/v2/everything?q=climate change and animals&from=' + `${date}` + '&sortBy=popularity&apiKey=' + `${apiKey}`
   useEffect(() => {
     fetchNews()
   }, []);
