@@ -8,6 +8,7 @@ body {
   background-color: #62e8ff;
 }
 
+
 .flex-container {
   display: flex;
 }
@@ -115,10 +116,16 @@ header .navbar {
   outline: none;
 }
 
+/* @media screen and (height: 100px) {
+ .sidebar-wrapper {
+    text-align:left;
+ }
+} */
+
+
 .sidebar-wrapper {
   background-color: #66999b; 
   width: 20%;
-  height: 600px;
   position: relative;
   float: left;
   font-family: "Quicksand";
@@ -132,6 +139,7 @@ header .navbar {
   padding-left: 15px;
   overflow-y: scroll;
 }
+
 
 .sidebar-wrapper::-webkit-scrollbar {
   display: none;
@@ -159,9 +167,8 @@ a:hover {
   font-size: 15px;
   border-radius: 0px;
   padding: 10px;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
   text-align: center;
-  margin-bottom: 0px;
 }
 
 #countryOrContinentButton {

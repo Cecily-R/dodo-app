@@ -4,6 +4,7 @@ import News from './News'
 
 const Sidebar = (props) => {
 
+
 return (
   <>
   <h2>{props.sidebarContent}</h2>
