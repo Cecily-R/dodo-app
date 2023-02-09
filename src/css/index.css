@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&family=Rubik+Gemstones&family=Sanchez:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;800&family=VT323&display=swap');
+
 
 body {
   height: 100%;
@@ -6,50 +8,135 @@ body {
   background-color: #62e8ff;
 }
 
+
 .flex-container {
   display: flex;
 }
 
 header {
-  padding-top: 10px;
+  padding-top: 0px;
 }
 
 h1 {
   margin: 0;
   text-align: center;
   color: #12126d;
-  font-family: "Rubik Gemstones";
+  font-family: "Quicksand";
+}
+
+h2 {
+  text-align: center;
 }
 
 .navbar .breakingNewsButton {
   background: var(--primary);
   border: 0;
-  color: #12126d;
-  background-color: ffff; 
-  font-family: "Sanchez";
+  color: white;
+  background-color:#88ab75;
+  font-family: "Quicksand";
+  font-weight: auto;
+  font-size: medium;
   size: 200px;
   border-radius: 4px;
   padding: 10px;
   cursor: pointer;
+  margin-right: 10px;
+}
+.navbar .breakingNewsButton:hover {
+  background: var(--primary);
+  border: 1px;
+  color: white;
+  background-color: #548c36;
+  font-family: "Quicksand";
+  font-weight: auto;
+  font-size: medium;
+  size: 200px;
+  border-radius: 4px;
+  padding: 10px;
+  cursor: pointer;
+  margin-right: 10px;
 }
 
 .navbar .resourcesButton {
   background: var(--primary);
   border: 0;
-  color: #12126d;
-  background-color: ffff; 
+  color: white;
+  background-color: #88ab75;
   padding: 10px;
-  font-family: "Sanchez";
+  font-family: "Quicksand";
+  font-weight: auto;
+  font-size: medium;
   size: 200px;
   border-radius: 4px;
   position: center;
   cursor: pointer;
+  margin-right: 10px;
+}
+.navbar .resourcesButton:hover {
+  background: var(--primary);
+  border: 0;
+  color: white;
+  background-color:#548c36;
+  font-family: "Quicksand";
+  font-weight: auto;
+  font-size: medium;
+  size: 200px;
+  border-radius: 4px;
+  padding: 10px;
+  cursor: pointer;
+  margin-right: 10px;
 }
 
-.navbar ul {
+header .navbar {
+  background: #496a81;
+  border: 0;
+  color: #12126d;
+  background-color: ffff; 
+  padding: 10px;
+  font-family: "Quicksand";
+  position: relative;
+  size: 200px;
+  border-radius: 0px;
+
+  align-items: center;
+}
+
+.navbar img {
+  padding-left: 20px;
+  margin: 10px;
+}
+
+/* .navbar a {
+  color: white;
+  margin-right: 10px;
+  margin-left: 10px;
+} */
+
+/* .navbar li {
+  list-style-type: none;
+  margin: 10px;
+  color: white;
+  font-weight: 900;
+  cursor: pointer;
+  font-family: Quicksand;
+} */
+
+/* .navbar button {
+  background-color: #88ab75;
+  color: white;
+  font-family: "Quicksand";
+  font-weight: auto;
+  font-size: medium;
+  border: 0px;
+  box-shadow: none;
+  border-radius: 4px;
+  cursor: pointer;
+} */
+
+/* .navbar ul {
   list-style-type: none;
   margin: 0;
-}
+} */
 
 .map-wrapper {
   width: 80%;
@@ -59,38 +146,116 @@ h1 {
   outline: none;
 }
 
+/* @media screen and (height: 100px) {
+ .sidebar-wrapper {
+    text-align:left;
+ }
+} */
+
+
 .sidebar-wrapper {
-  background-color: #ffc47d; 
+  background-color: #66999b; 
   width: 20%;
+  height: 650px;
   position: relative;
   float: left;
-  font-family: "Sanchez";
+  font-family: "Quicksand";
   font-size: 0.9em;
-  color: #12126d;
+  color: white;
+  margin-top: 8px;
   margin-left: 8px;
   margin-bottom: 8px;
   padding: 1em;
-  border-radius: 25px;
-  padding-left: 40px
+  border-radius: 8px;
+  padding-left: 15px;
+  overflow-y: scroll;
+}
+
+.sidebar-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+a:link {
+  color: #12126d; 
+  text-decoration: none;
+}
+
+a:visited {
+  color: #12126d; 
+  text-decoration: none;
+}
+
+a:hover {
+  color: #12126d; 
+  text-decoration: underline;
 }
 
 .footer {
-  color: #12126d;
-  font-family: "Sanchez";
+  position: relative;
+  background: #496a81;
+  color: white;
+  font-family: "Quicksand";
   font-size: 15px;
-  border-radius: 4px;
+  border-radius: 0px;
   padding: 10px;
+  padding-bottom: 10px;
   text-align: center;
 }
 
 #countryOrContinentButton {
-  background: #ffc47d;
-  color: #12126d; 
+  width: 148px;
+  background: #0e652b;
+  border: 0;
+  color: white; 
   padding: 7px;
-  margin-right: 10px;
-  font-family: "Sanchez";
+  margin-right: 20px;
+  margin-top: 8px;
+  font-family: "Quicksand";
+  font-weight: bold;
+  font-size: medium;
   size: 200px;
   border-radius: 4px;
   cursor: pointer;
   float: right;
+}
+
+#countryOrContinentButton:hover {
+  width: 148px;
+  background: #88ab75;
+  color: white; 
+  padding: 7px;
+  margin-right: 20px;
+  margin-top: 8px;
+  font-family: "Quicksand";
+  font-weight: bold;
+  /* size: 200px; */
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+.animalInfo {
+  background-color: #88ab75;
+  color: white;
+  max-width: auto 0;
+  border-radius: 8px;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  margin-bottom: 5px;
+}
+
+.vertical-center {
+  margin: 0px;
+  margin-top: 50px;
+  position: relative;
+  float: right;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.animalInfo img {
+  border-color: white;
+  border: 10px;
 }

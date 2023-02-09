@@ -12,7 +12,7 @@ const projection = geoPatterson()
   .translate([width / 2, height / 1.8])
   .scale(128);
 
-const Map = ({setSidebarContent, setSidebarAnimals, setSidebarCountry, groupSelection, statusSelection, sidebarCountry}) => {
+const Map = ({setSidebarContent, setSidebarAnimals, setSidebarCountry, groupSelection, statusSelection, sidebarCountry, setShowAnimals, setShowNews}) => {
   const areaSwitchButton = useRef(null);
   const [buttonText, setButtonText] = useState('countries');
   const [geoURL, setGeoURL] = useState("https://raw.githubusercontent.com/deldersveld/topojson/master/world-continents.json");
@@ -32,6 +32,8 @@ const Map = ({setSidebarContent, setSidebarAnimals, setSidebarCountry, groupSele
 
     setSelectedArea(countryOrContinent);
     setSidebarContent(countryOrContinent);
+    setShowAnimals(true);
+    setShowNews(false);
 
     selectedArea !== 'continents'
       ? client.fetchAnimalsBySelectedArea(countryOrContinent, setSidebarAnimals)
@@ -46,13 +48,13 @@ const Map = ({setSidebarContent, setSidebarAnimals, setSidebarCountry, groupSele
   }, [sidebarCountry])
 
   function handleCountryClick() {
-    if (buttonText === 'continents') {
-      setButtonText('countries');
+    if (buttonText === 'Continents') {
+      setButtonText('Countries');
       setGeoURL("https://raw.githubusercontent.com/deldersveld/topojson/master/world-continents.json");
       setSidebarContent()
       setSidebarCountry()
     } else {
-      setButtonText('continents');
+      setButtonText('Continents');
       setGeoURL("https://raw.githubusercontent.com/lotusms/world-map-data/main/world.json");
       setSidebarContent()
       setSidebarAnimals()
@@ -61,7 +63,7 @@ const Map = ({setSidebarContent, setSidebarAnimals, setSidebarCountry, groupSele
 
   return (
     <div className="Map">
-    <button id="countryOrContinentButton" onClick={handleCountryClick} ref={areaSwitchButton}>{buttonText}</button>     
+    <button id="countryOrContinentButton" onClick={handleCountryClick} ref={areaSwitchButton}>{buttonText || 'Continents'}</button>     
       <ComposableMap width={width} height={height} projection={projection} position="relative" >
       <ZoomableGroup translateExtent={[[0, 0], [width, height]]}>
             <Geographies geography={geoURL}>

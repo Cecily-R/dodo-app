@@ -1,7 +1,7 @@
 
 class ApiClient {
   constructor() {
-    this.baseURL = 'http://localhost:4567/'
+    this.baseURL = 'http://localhost:9292/'
   };
 
   fetchAnimalsBySelectedArea = (selectedArea, setSidebarAnimals) => {
