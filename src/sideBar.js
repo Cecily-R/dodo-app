@@ -76,7 +76,7 @@ const Sidebar = ({noneFound, loadingAPI, sidebarContent, sidebarAnimals, sidebar
     {showNews ? <News /> : null}
     {sidebarCountry !== undefined && showAnimals === true
       ? sidebarCountry.map((animal) => {return (<p id='animals'>{animal.result[0].main_common_name}</p>)})
-      : <p></p>}
+      : null}
     </>
   )}
  
