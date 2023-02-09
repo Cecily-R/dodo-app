@@ -56,11 +56,13 @@ const Map = ({setSidebarContent, setSidebarAnimals, setSidebarCountry, groupSele
       setSidebarCountry()
       setLoadingAPI(false)
       setNoneFound(false)
+      setShowNews(false);
     } else {
       setButtonText('Continents');
       setGeoURL("https://raw.githubusercontent.com/lotusms/world-map-data/main/world.json");
       setSidebarContent()
       setSidebarAnimals()
+      setShowNews(false);
     };
   };
 

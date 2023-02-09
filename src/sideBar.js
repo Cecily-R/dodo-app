@@ -4,11 +4,20 @@ import News from './News'
 import Animal from './animal' 
 
 const Sidebar = ({noneFound, loadingAPI, sidebarContent, sidebarAnimals, sidebarCountry, buttonText, setGroupSelection, setStatusSelection, showAnimals, showNews}) => {
-  const statusList = ["DD", "LC", "NT", "VU", "EN", "CR", "EW", "EX"]
+  const statusList = [
+    { apiName: "DD", readableName: "Data Deficient" },
+    { apiName: "LC", readableName: "Least Concern" },
+    { apiName: "NT", readableName: "Near Threatened" },
+    { apiName: "VU", readableName: "Vulnerable" },
+    { apiName: "EN", readableName: "Endangered" },
+    { apiName: "CR", readableName: "Critical" },
+    { apiName: "EW", readableName: "Extinct in Wild" },
+    { apiName: "EX", readableName: "Extinct" }
+  ]
   const groupList = ["reef_building_corals","chameleons","mammals","mangrove_plants","seagrasses","cycads","blennies","cone_snails","magnolias","seasnakes","fw_caridean_shrimps","fw_crayfish","tunas_and_billfishes","butterfly_fishes","groupers","pufferfishes","conifers","surgeonfishes","birds","crocodiles_and_alligators","sharks_and_rays","fw_crabs","cacti","tarpons_and_ladyfishes","sturgeons","angelfishes","lobsters","amphibians","seabreams_porgies_picarels","hagfishes","wrasses_and_parrotfishes"]
+
   function handleGroupChange(e) {
     setGroupSelection(e.target.value)
-    console.log(e.target.value)
   }
 
   function handleStatusChange(e) {
@@ -21,9 +30,9 @@ const Sidebar = ({noneFound, loadingAPI, sidebarContent, sidebarAnimals, sidebar
     const formatted = caps.join(" ")
     return formatted
   }
-
+  
   const groupDropdown =
-    <select className="typeDropdown"onChange={handleGroupChange}>
+    <select className="dropdown"onChange={handleGroupChange}>
       {groupList.sort().map(group => {
         return (
           <option value={group}> 
@@ -36,12 +45,12 @@ const Sidebar = ({noneFound, loadingAPI, sidebarContent, sidebarAnimals, sidebar
     </select>
 
   const statusDropdown =
-    <select className="statusDropdown" onChange={handleStatusChange}>
-      {statusList.reverse().map(status => {
+    <select className="dropdown" onChange={handleStatusChange}>
+      {statusList.map(status => {
         return (
-          <option value={status}> 
+          <option value={status.apiName}> 
             {
-              status
+              status.readableName
             } 
           </option>
         )
@@ -51,7 +60,9 @@ const Sidebar = ({noneFound, loadingAPI, sidebarContent, sidebarAnimals, sidebar
   return (
     <>
 
-    <h2>{sidebarContent}</h2>
+    <h2>{sidebarContent || "Click the map!"}</h2>
+    <h3 className='animalTypeDropdown'>{buttonText === 'Continents' && groupDropdown}</h3>
+    <h3 className="animalStatusDropdown">{buttonText === 'Continents' && statusDropdown}</h3>
     {loadingAPI && <p id='loadingMs'>Loading...</p>}
     {noneFound && <p id='noSearchMatchesMs'>No species match your criteria.</p>}
 
@@ -60,11 +71,8 @@ const Sidebar = ({noneFound, loadingAPI, sidebarContent, sidebarAnimals, sidebar
       : null}
     {showNews ? <News />: null}
     {sidebarCountry !== undefined && showAnimals === true
-      ? sidebarCountry.map((animal) => {return (<p>{animal.result[0].main_common_name}</p>)})
+      ? sidebarCountry.map((animal) => {return (<p id='animals'>{animal.result[0].main_common_name}</p>)})
       : <p></p>}
-    <h3 className='animalTypeDropdown'>{buttonText === 'Continents' && groupDropdown}</h3>
-    <h3 className="animalStatusDropdown">{buttonText === 'Continents' && statusDropdown}</h3>
-
     </>
   )}
  

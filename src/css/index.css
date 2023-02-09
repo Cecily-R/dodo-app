@@ -40,6 +40,7 @@ h2 {
   font-weight: auto;
   font-size: medium;
   size: 200px;
+  height: 40px;
   border-radius: 4px;
   padding: 10px;
   cursor: pointer;
@@ -49,7 +50,7 @@ h2 {
   background: var(--primary);
   border: 1px;
   color: white;
-  background-color: #548c36;
+  background-color: #0e652b;
   font-family: "Quicksand";
   font-weight: auto;
   font-size: medium;
@@ -192,7 +193,13 @@ a:hover {
  
 }
 
-.typeDropdown {
+.sidebar-wrapper .animalStatusDropdown {
+  text-align: center;
+  padding: 10;
+}
+
+.dropdown {
+  width: 50%;
   background-color: #66999b;
   padding:7px;
   color: white;
@@ -205,18 +212,25 @@ a:hover {
   border-radius: 8px;
 }
 
-.typeDropdown:hover {
+.dropdown:hover {
   background-color: #62e8ff;
   color: #12126d; 
 }
 
-.typeDropdown:visited {
+.dropdown:visited {
   border:none;
 }
 
-.sidebar-wrapper .animalStatusDropdown {
+#animals {
   text-align: center;
-  padding: 10;
+  background-color:#88ab75;
+  padding: 10px;
+  max-width: auto 0;
+  border-radius: 8px;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 #loadingMs {
@@ -226,37 +240,6 @@ a:hover {
 #noSearchMatchesMs {
   text-align: center;
 }
-
-.statusDropdown {
-  background-color: #66999b;
-  color: white;
-  padding:7px;
-  font-family: "Quicksand";
-  font-weight: bold;
-  border: none;
-  text-align: center;
-  font:450;
-  font-size: 15px;
-  border-radius: 8px
-}
-
-.statusDropdown:hover {
-  background-color: #62e8ff;
-  color: #12126d; 
-}
-
-.statusDropdown:visited {
-  outline: none;
-  border:none;
-  background-color: #62e8ff;
-}
-
-.statusDropdown {
-  background-color: #66999b;
-  font-family: "Quicksand";
-  border: none;
-}
-  
 
 .footer {
   position: relative;
@@ -282,6 +265,7 @@ a:hover {
   font-weight: bold;
   font-size: medium;
   size: 200px;
+  height: 40px;
   border-radius: 4px;
   cursor: pointer;
   float: right;
