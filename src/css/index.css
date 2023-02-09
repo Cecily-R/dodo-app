@@ -172,18 +172,18 @@ header .navbar {
 }
 
 a:link {
-  color: #12126d; 
+  color: #d6eed1; 
   text-decoration: none;
 }
 
 a:visited {
-  color: #12126d; 
+  color: #d6eed1; 
   text-decoration: none;
 }
 
 a:hover {
-  color: #12126d; 
-  text-decoration: underline;
+  color: white; 
+  text-decoration: none;
 }
 
 .sidebar-wrapper .animalTypeDropdown {

@@ -1,7 +1,9 @@
 
 import {useEffect} from 'react'
 import News from './News'
-import Animal from './animal' 
+import Animal from './animal'
+import Loader from 'react-dots-loader'
+import 'react-dots-loader/index.css'
 
 const Sidebar = ({noneFound, loadingAPI, sidebarContent, sidebarAnimals, sidebarCountry, buttonText, setGroupSelection, setStatusSelection, showAnimals, showNews}) => {
   const statusList = ["DD", "LC", "NT", "VU", "EN", "CR", "EW", "EX"]
@@ -52,19 +54,19 @@ const Sidebar = ({noneFound, loadingAPI, sidebarContent, sidebarAnimals, sidebar
     <>
 
     <h2>{sidebarContent}</h2>
-    {loadingAPI && <p id='loadingMs'>Loading...</p>}
-    {noneFound && <p id='noSearchMatchesMs'>No species match your criteria.</p>}
+    {loadingAPI && <p id='loadingMs'><Loader  size={10}/></p>}
+    {noneFound && <p id='noSearchMatchesMs'>No species match your criteria</p>}
 
     {sidebarAnimals !== undefined && showAnimals === true
      ? sidebarAnimals.result.sort().map((animal, i) => {return <Animal key={i} animal={animal}/>})
       : null}
     {showNews ? <News />: null}
-    {sidebarCountry !== undefined && showAnimals === true
-      ? sidebarCountry.map((animal) => {return (<p>{animal.result[0].main_common_name}</p>)})
-      : <p></p>}
+   
     <h3 className='animalTypeDropdown'>{buttonText === 'Continents' && groupDropdown}</h3>
     <h3 className="animalStatusDropdown">{buttonText === 'Continents' && statusDropdown}</h3>
-
+    {sidebarCountry !== undefined && showAnimals === true
+      ? sidebarCountry.map((animal) => {return (<h3>{animal.result[0].main_common_name}</h3>)})
+      : <p></p>}
     </>
   )}
  
