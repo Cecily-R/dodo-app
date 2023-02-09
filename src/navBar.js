@@ -4,6 +4,8 @@ import logo from "./css/dodo.png";
 const Navbar = (props) => {
   function handleClick() {
     props.setShowNews(!props.showNews)
+    props.setShowAnimals(false)
+    props.setSidebarContent('Breaking News')
   };
 
   return (
@@ -11,9 +13,10 @@ const Navbar = (props) => {
       <nav className="navbar">
         <img src={ logo } alt="Logo" />
           <div className="vertical-center"> 
-            <button className="breakingNewsButton" onClick={handleClick}>Breaking News</button>
-            <button className="resourcesButton">Make a Donation</button>
-          </div>
+            <button className="breakingNewsButton" onClick={handleClick}>
+              Breaking News
+                </button>
+            </div>
         </nav>
       </header>
   );
