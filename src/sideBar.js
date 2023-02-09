@@ -3,18 +3,16 @@ import {useEffect} from 'react'
 import News from './News'
 import Animal from './animal' 
 
-const Sidebar = ({sidebarContent, sidebarAnimals, sidebarCountry, buttonText, setGroupSelection, setStatusSelection, showAnimals, showNews}) => {
+const Sidebar = ({noneFound, loadingAPI, sidebarContent, sidebarAnimals, sidebarCountry, buttonText, setGroupSelection, setStatusSelection, showAnimals, showNews}) => {
   const statusList = ["DD", "LC", "NT", "VU", "EN", "CR", "EW", "EX"]
   const groupList = ["reef_building_corals","chameleons","mammals","mangrove_plants","seagrasses","cycads","blennies","cone_snails","magnolias","seasnakes","fw_caridean_shrimps","fw_crayfish","tunas_and_billfishes","butterfly_fishes","groupers","pufferfishes","conifers","surgeonfishes","birds","crocodiles_and_alligators","sharks_and_rays","fw_crabs","cacti","tarpons_and_ladyfishes","sturgeons","angelfishes","lobsters","amphibians","seabreams_porgies_picarels","hagfishes","wrasses_and_parrotfishes"]
   function handleGroupChange(e) {
     setGroupSelection(e.target.value)
     console.log(e.target.value)
   }
-  console.log(sidebarCountry)
 
   function handleStatusChange(e) {
     setStatusSelection(e.target.value)
-    console.log(e.target.value)
   }
 
   function format(word) {
@@ -52,16 +50,21 @@ const Sidebar = ({sidebarContent, sidebarAnimals, sidebarCountry, buttonText, se
 
   return (
     <>
-    <h2>{sidebarContent}</h2>
+
+    <p>{sidebarContent}</p>
+    {loadingAPI && <h2>Loading...</h2>}
+    {noneFound && <h2>No species match your criteria</h2>}
+
     {sidebarAnimals !== undefined && showAnimals === true
      ? sidebarAnimals.result.sort().map((animal, i) => {return <Animal key={i} animal={animal}/>})
       : null}
     {showNews ? <News />: null}
     {sidebarCountry !== undefined && showAnimals === true
       ? sidebarCountry.map((animal) => {return (<p>{animal.result[0].main_common_name}</p>)})
-      : <p></p>}
+      : <p></p>}.
     <h3 className='animalTypeDropdown'>{buttonText === 'Continents' && groupDropdown}</h3>
     <h3 className="animalStatusDropdown">{buttonText === 'Continents' && statusDropdown}</h3>
+
     </>
   )}
  
