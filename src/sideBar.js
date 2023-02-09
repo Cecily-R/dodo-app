@@ -51,9 +51,9 @@ const Sidebar = ({noneFound, loadingAPI, sidebarContent, sidebarAnimals, sidebar
   return (
     <>
 
-    <p>{sidebarContent}</p>
-    {loadingAPI && <h2>Loading...</h2>}
-    {noneFound && <h2>No species match your criteria</h2>}
+    <h2>{sidebarContent}</h2>
+    {loadingAPI && <p>Loading...</p>}
+    {noneFound && <p>No species match your criteria</p>}
 
     {sidebarAnimals !== undefined && showAnimals === true
      ? sidebarAnimals.result.sort().map((animal, i) => {return <Animal key={i} animal={animal}/>})
@@ -61,7 +61,7 @@ const Sidebar = ({noneFound, loadingAPI, sidebarContent, sidebarAnimals, sidebar
     {showNews ? <News />: null}
     {sidebarCountry !== undefined && showAnimals === true
       ? sidebarCountry.map((animal) => {return (<p>{animal.result[0].main_common_name}</p>)})
-      : <p></p>}.
+      : <p></p>}
     <h3 className='animalTypeDropdown'>{buttonText === 'Continents' && groupDropdown}</h3>
     <h3 className="animalStatusDropdown">{buttonText === 'Continents' && statusDropdown}</h3>
 
