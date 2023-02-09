@@ -10,8 +10,7 @@ function App() {
   const [groupSelection, setGroupSelection] = useState("amphibians")
   const [statusSelection, setStatusSelection] = useState("EX")
   const [sidebarCountry, setSidebarCountry] = useState()
-  const [pageSwitch, setPageSwitch] = useState()
-  const [selectedArea, setSelectedArea] = useState();
+  const [buttonText, setButtonText] = useState('countries');
 
   return (
     <>
@@ -22,8 +21,8 @@ function App() {
           <Sidebar 
             sidebarContent={sidebarContent} 
             sidebarAnimals={sidebarAnimals}
-            sidebarCountry={sidebarCountry} 
-            selectedArea={selectedArea}
+            sidebarCountry={sidebarCountry}
+            buttonText={buttonText} 
             setGroupSelection={setGroupSelection}
             setStatusSelection={setStatusSelection}
           />
@@ -33,8 +32,8 @@ function App() {
             setSidebarContent={setSidebarContent} 
             setSidebarAnimals={setSidebarAnimals} 
             setSidebarCountry={setSidebarCountry}
-            setPageSwitch={setPageSwitch}
-            setSelectedArea={setSelectedArea}
+            setButtonText={setButtonText}
+            buttonText={buttonText}
             groupSelection={groupSelection}
             statusSelection={statusSelection}
             sidebarCountry={sidebarCountry}

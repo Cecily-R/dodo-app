@@ -12,9 +12,8 @@ const projection = geoPatterson()
   .translate([width / 2, height / 1.8])
   .scale(128);
 
-const Map = ({setSidebarContent, setSidebarAnimals, setSidebarCountry, groupSelection, statusSelection, sidebarCountry}) => {
+const Map = ({setSidebarContent, setSidebarAnimals, setSidebarCountry, setButtonText, buttonText, groupSelection, statusSelection, sidebarCountry}) => {
   const areaSwitchButton = useRef(null);
-  const [buttonText, setButtonText] = useState('countries');
   const [geoURL, setGeoURL] = useState("https://raw.githubusercontent.com/deldersveld/topojson/master/world-continents.json");
   const [_, setSelectedArea] = useState();
   const redlist = new RedlistModel();
