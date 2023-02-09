@@ -60,7 +60,7 @@ const Sidebar = ({noneFound, loadingAPI, sidebarContent, sidebarAnimals, sidebar
       : null}
     {showNews ? <News />: null}
     {sidebarCountry !== undefined && showAnimals === true
-      ? sidebarCountry.map((animal) => {return (<p>{animal.result[0].main_common_name}</p>)})
+      ? sidebarCountry.map((animal) => {return (<h3>{animal.result[0].main_common_name}</h3>)})
       : <p></p>}
     <h3 className='animalTypeDropdown'>{buttonText === 'Continents' && groupDropdown}</h3>
     <h3 className="animalStatusDropdown">{buttonText === 'Continents' && statusDropdown}</h3>
