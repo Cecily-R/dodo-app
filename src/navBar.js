@@ -16,7 +16,6 @@ const Navbar = (props) => {
             <button className="breakingNewsButton" onClick={handleClick}>
               Breaking News
                 </button>
-              <button className="resourcesButton">Make a Donation</button>
             </div>
         </nav>
       </header>
