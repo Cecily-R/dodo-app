@@ -17,11 +17,12 @@ const Animal = (animal) => {
       <p>{animal.animal.scientific_name}</p>
       <p>Subpopulation: <b>{animal.animal.subpopulation}</b></p>
       <p>Habitat: <b>{animal.animal.habitat}</b></p>
-      <p>{animal.animal.image}</p>
+      
     </div>
   );
 };
 
+// <p>{animal.animal.image}</p>
 // <img src={ image } width="150" height="150" alt=""/>
 export default Animal;
 

@@ -3,7 +3,7 @@
   "scientific_name":"Phascolarctos cinereus",
   "common_name": "Koala",
   "subpopulation": "50000",
-  "habitat": "xxx",
+  "habitat": "Forest / Woodland",
   "image": "oc_id_01.jpg"
   },
   {
@@ -11,7 +11,7 @@
     "scientific_name":"Burramys parvus",
     "common_name": "Mountain Pygmy Possum",
     "subpopulation": "2000",
-    "habitat": "xxx",
+    "habitat": "Alpine / Subalpine",
     "image": "oc_id_02.jpg"
   },
   {
@@ -19,7 +19,7 @@
     "scientific_name":"Potorous longipes",
     "common_name": "Long-footed Potoroo",
     "subpopulation": "2000",
-    "habitat": "xxx",
+    "habitat": "Forest / Rainforest",
     "image": "oc_id_03.jpg"
   },
   {
@@ -27,7 +27,7 @@
     "scientific_name":"Petauroides",
     "common_name": "Greater Glider",
     "subpopulation": "50000",
-    "habitat": "xxx",
+    "habitat": "Forest",
     "image": "oc_id_04.jpg"
   },
   {
@@ -35,7 +35,7 @@
     "scientific_name":"Myrmecobius fasciatus",
     "common_name": "Numbat",
     "subpopulation": "1000",
-    "habitat": "xxx",
+    "habitat": "Woodland",
     "image": "oc_id_05.jpg"
   },
   {
@@ -43,7 +43,7 @@
     "scientific_name":"Anthochaera phrygia",
     "common_name": "Regent Honeyeater",
     "subpopulation": "1500",
-    "habitat": "xxx",
+    "habitat": "Temperate Woodland",
     "image": "oc_id_06.jpg"
   },
   {
@@ -51,7 +51,7 @@
     "scientific_name":"Neophema chrysogaster",
     "common_name": "Orange-bellied Parrot",
     "subpopulation": "50",
-    "habitat": "xxx",
+    "habitat": "Coastal / Lagoons",
     "image": "oc_id_07.jpg"
   },
 
@@ -60,7 +60,7 @@
     "scientific_name":"Dasyurus viverrinus",
     "common_name": "Eastern Quoll",
     "subpopulation": "10000",
-    "habitat": "xxx",
+    "habitat": "Forest / Heathland",
     "image": "oc_id_08.jpg"
   },
   {
@@ -68,7 +68,7 @@
     "scientific_name":"Numenius madagascariensis",
     "common_name": "Eastern Curlew",
     "subpopulation": "32000",
-    "habitat": "xxx",
+    "habitat": "Graslland / Bog",
     "image": "oc_id_09.jpg"
   },
   {
@@ -76,7 +76,7 @@
     "scientific_name":"Bettongia penicillata",
     "common_name": "Woylie",
     "subpopulation": "15000",
-    "habitat": "xxx",
+    "habitat": "Woodland",
     "image": "oc_id_10.jpg"
   }  
 ]}

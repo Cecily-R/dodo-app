@@ -4,7 +4,7 @@
   "scientific_name":"Canis rufus",
   "common_name": "Red Wolf",
   "subpopulation": "21",
-  "habitat": "xxx",
+  "habitat": "Forest / Wetlands",
   "image": "./images/na_id_01.jpg"
   },
   {
@@ -20,7 +20,7 @@
     "scientific_name":"Athene cunicularia",
     "common_name": "Burrowing Owl",
     "subpopulation": "10000",
-    "habitat": "xxx",
+    "habitat": "Grassland / Desert",
     "image": "./images/na_id_03.jpg"
   },
   {
@@ -36,7 +36,7 @@
     "scientific_name":"Gymnogyps californianus",
     "common_name": "California Condor",
     "subpopulation": "336",
-    "habitat": "xxx",
+    "habitat": "Desert",
     "image": "./images/na_id_05.jpg"
   },
   {
@@ -52,7 +52,7 @@
     "scientific_name":"Urocyon littoralis",
     "common_name": "Island Fox",
     "subpopulation": "2300",
-    "habitat": "xxx",
+    "habitat": "Grassland",
     "image": "./images/na_id_07.jpg"
   },
 
@@ -61,7 +61,7 @@
     "scientific_name":"Vulpes velox",
     "common_name": "Northern Swift Fox",
     "subpopulation": "870",
-    "habitat": "xxx",
+    "habitat": "Shortgrass Prairie",
     "image": "./images/na_id_08.jpg"
   },
   {
@@ -69,7 +69,7 @@
     "scientific_name":"Enhydra lutris",
     "common_name": "Sea Otter",
     "subpopulation": "3000",
-    "habitat": "xxx",
+    "habitat": "Coastline / Kelp Forests",
     "image": "./images/na_id_09.jpg"
   },
   {
@@ -77,7 +77,7 @@
     "scientific_name":"Marmota vancouverensis",
     "common_name": "Vancouver Island Marmot",
     "subpopulation": "250",
-    "habitat": "xxx",
+    "habitat": "Subalpine Meadows",
     "image": "./images/na_id_10.jpg"
   }  
 ]}

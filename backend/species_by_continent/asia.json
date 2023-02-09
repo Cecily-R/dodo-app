@@ -3,7 +3,7 @@
   "scientific_name":"Panthera uncia",
   "common_name": "Snow Leopard",
   "subpopulation": "4000",
-  "habitat": "xxx",
+  "habitat": "Mountains",
   "image": "as_id_01.jpg"
   },
   {
@@ -11,7 +11,7 @@
     "scientific_name":"Manis pentadactyla",
     "common_name": "Asian Pangolin",
     "subpopulation": "10000",
-    "habitat": "xxx",
+    "habitat": "Tropical Forest",
     "image": "as_id_02.jpg"
   },
   {
@@ -19,7 +19,7 @@
     "scientific_name":"Bos javanicus",
     "common_name": "Banteng",
     "subpopulation": "10000",
-    "habitat": "xxx",
+    "habitat": "Forest / Grassland",
     "image": "as_id_03.jpg"
   },
   {
@@ -27,7 +27,7 @@
     "scientific_name":"Panthera tigris amoyensis",
     "common_name": "South China Tiger",
     "subpopulation": "20",
-    "habitat": "xxx",
+    "habitat": "Rainforest",
     "image": "as_id_04.jpg"
   },
   {
@@ -35,7 +35,7 @@
     "scientific_name":"Elephas maximus sumatrensis",
     "common_name": "Sumatran Elephant",
     "subpopulation": "2800",
-    "habitat": "xxx",
+    "habitat": "Rainforest",
     "image": "as_id_05.jpg"
   },
   {
@@ -43,7 +43,7 @@
     "scientific_name":"Sarcogyps calvus",
     "common_name": "Red-headed Vulture",
     "subpopulation": "10000",
-    "habitat": "xxx",
+    "habitat": "Desert / Wetlands",
     "image": "as_id_06.jpg"
   },
   {
@@ -51,7 +51,7 @@
     "scientific_name":"Pongo abelii",
     "common_name": "Sumatran Orangutan",
     "subpopulation": "13000",
-    "habitat": "xxx",
+    "habitat": "Rainforest",
     "image": "as_id_07.jpg"
   },
 
@@ -60,7 +60,7 @@
     "scientific_name":"Nomascus nasutus",
     "common_name": "Eastern Black Crested Gibbon",
     "subpopulation": "30",
-    "habitat": "xxx",
+    "habitat": "Forest",
     "image": "as_id_08.jpg"
   },
   {
@@ -68,7 +68,7 @@
     "scientific_name":"Camelus bactrianus",
     "common_name": "Wild Bactrian Camel",
     "subpopulation": "1100",
-    "habitat": "xxx",
+    "habitat": "Desert",
     "image": "as_id_09.jpg"
   },
   {
@@ -76,7 +76,7 @@
     "scientific_name":"Rhinoceros sondaicus",
     "common_name": "Java Rhinoceros",
     "subpopulation": "76",
-    "habitat": "xxx",
+    "habitat": "Rainforest",
     "image": "as_id_10.jpg"
   }  
 ]}
