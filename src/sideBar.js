@@ -61,15 +61,19 @@ const Sidebar = ({noneFound, loadingAPI, sidebarContent, sidebarAnimals, sidebar
     <>
 
     <h2>{sidebarContent || "Click the map!"}</h2>
-    <h3 className='animalTypeDropdown'>{buttonText === 'Continents' && groupDropdown}</h3>
-    <h3 className="animalStatusDropdown">{buttonText === 'Continents' && statusDropdown}</h3>
-    {loadingAPI && <p id='loadingMs'>Loading...</p>}
-    {noneFound && <p id='noSearchMatchesMs'>No species match your criteria.</p>}
+    { showNews === false ?
+      <div>
+        <h3 className='animalTypeDropdown'>{buttonText === 'Continents' && groupDropdown}</h3>
+        <h3 className="animalStatusDropdown">{buttonText === 'Continents' && statusDropdown}</h3>
+      </div> : null }
+      {showNews == false && loadingAPI && <p id='loadingMs'>Loading...</p>}
+      {showNews == false && noneFound && <p id='noSearchMatchesMs'>No species match your criteria.</p>}
+  
 
     {sidebarAnimals !== undefined && showAnimals === true
      ? sidebarAnimals.result.sort().map((animal, i) => {return <Animal key={i} animal={animal}/>})
       : null}
-    {showNews ? <News />: null}
+    {showNews ? <News /> : null}
     {sidebarCountry !== undefined && showAnimals === true
       ? sidebarCountry.map((animal) => {return (<p id='animals'>{animal.result[0].main_common_name}</p>)})
       : <p></p>}
