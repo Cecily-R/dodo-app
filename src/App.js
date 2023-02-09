@@ -19,7 +19,11 @@ function App() {
   return (
     <>
     <div id='background'>
-      <Navbar showNews={showNews} setShowNews={setShowNews} setShowAnimals={setShowAnimals} setSidebarContent={setSidebarContent} />
+      <Navbar 
+      showNews={showNews} 
+      setShowNews={setShowNews} 
+      setShowAnimals={setShowAnimals} 
+      setSidebarContent={setSidebarContent} />
       <div className="flex-container">
         <div className="sidebar-wrapper">
           <Sidebar 
