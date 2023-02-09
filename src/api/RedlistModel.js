@@ -2,7 +2,7 @@ import RedlistClient from './RedlistClient'
 import {setState} from 'react'
 
 class RedlistModel {
-  constructor(setLoadingAPI, setNoneFound) {
+  constructor(setLoadingAPI, setNoneFound, buttonText) {
     this.client = new RedlistClient()
     this.filteredCountryList = []
     this.groupList = []
@@ -10,6 +10,7 @@ class RedlistModel {
     this.speciesInfoList = []
     this.setLoadingAPI = setLoadingAPI
     this.setNoneFound = setNoneFound
+    this.buttonText = buttonText
     //const [filteredCountry, setFilteredCountry] = setState()
   }
 
@@ -52,7 +53,7 @@ class RedlistModel {
   }
 
   findAnimals(iso, group, status, setSidebarCountry, setLoadingAPI) {
-    this.setLoadingAPI(true)
+    if (this.buttonText === "Continents") this.setLoadingAPI(true) 
     this.setNoneFound(false)
     setSidebarCountry()
     let promise = this.filteredSpecies(iso, group, status, setLoadingAPI)
@@ -64,7 +65,7 @@ class RedlistModel {
       .then((allPromises) => {
         setSidebarCountry(allPromises)
         this.setLoadingAPI(false)
-        if (allPromises.length === 0) this.setNoneFound(true)
+        if (allPromises.length === 0 && iso !== undefined) this.setNoneFound(true)
       })
   }
 }

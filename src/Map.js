@@ -17,14 +17,14 @@ const Map = ({setSidebarContent, setSidebarAnimals, setSidebarCountry, groupSele
   const areaSwitchButton = useRef(null);
   const [geoURL, setGeoURL] = useState("https://raw.githubusercontent.com/deldersveld/topojson/master/world-continents.json");
   const [_, setSelectedArea] = useState();
-  const redlist = new RedlistModel(setLoadingAPI, setNoneFound);
+  const redlist = new RedlistModel(setLoadingAPI, setNoneFound, buttonText);
   const [iso, setIso] = useState()
   
   const handleClick = (geo) => () => {
     const selectedArea = areaSwitchButton.current.textContent
     const countryOrContinent = selectedArea === 'Continents' ? geo.properties.name : geo.properties.continent
     const client = new ApiClient();
-    const redlist = new RedlistModel(setLoadingAPI, setNoneFound);
+    const redlist = new RedlistModel(setLoadingAPI, setNoneFound, buttonText);
     setIso(geo.properties["Alpha-2"])
     if (selectedArea === 'Continents') setLoadingAPI(true)
     setNoneFound(false)
@@ -38,9 +38,9 @@ const Map = ({setSidebarContent, setSidebarAnimals, setSidebarCountry, groupSele
     selectedArea !== 'Continents'
       ? client.fetchAnimalsBySelectedArea(countryOrContinent, setSidebarAnimals)
       : redlist.findAnimals(geo.properties["Alpha-2"], groupSelection, statusSelection, setSidebarCountry, sidebarCountry, setLoadingAPI)
-  };
+  }
 
-  useEffect((selectedArea) => {
+  useEffect((sidebarCountry) => {
     redlist.findAnimals(iso, groupSelection, statusSelection, setSidebarCountry, sidebarCountry, setLoadingAPI)
   }, [groupSelection, statusSelection])
 
