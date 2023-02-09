@@ -1,12 +1,19 @@
-import Map from './Map';
-import Navbar from './navBar';
-import Sidebar from './sideBar'
-import Footer from './footer';
-import React, {useState} from 'react';
+
+import Map from './Map.js';
+import Navbar from './navBar.js';
+import Sidebar from './sideBar.js'
+import Footer from './footer.js';
+import React, {useState, useEffect} from 'react';
+
 
 function App() {
   const [sidebarContent, setSidebarContent] = useState('Click the map!');
   const [sidebarAnimals, setSidebarAnimals] = useState();
+  const [groupSelection, setGroupSelection] = useState("amphibians")
+  const [statusSelection, setStatusSelection] = useState("EX")
+  const [sidebarCountry, setSidebarCountry] = useState()
+  const [pageSwitch, setPageSwitch] = useState()
+  const [selectedArea, setSelectedArea] = useState();
   const [showNews, setShowNews] = useState(false);
   const [showAnimals, setShowAnimals] = useState(false);
 
@@ -16,10 +23,32 @@ function App() {
       <Navbar showNews={showNews} setShowNews={setShowNews} setShowAnimals={setShowAnimals} setSidebarContent={setSidebarContent} />
       <div className="flex-container">
         <div className="sidebar-wrapper">
-          <Sidebar sidebarContent={sidebarContent} sidebarAnimals={sidebarAnimals} showNews={showNews} showAnimals={showAnimals} setShowAnimals={setShowAnimals}/>
+          <Sidebar 
+            sidebarContent={sidebarContent} 
+            sidebarAnimals={sidebarAnimals}
+            sidebarCountry={sidebarCountry} 
+            selectedArea={selectedArea}
+            setGroupSelection={setGroupSelection}
+            setStatusSelection={setStatusSelection}
+            showNews={showNews}
+            showAnimals={showAnimals}
+            setShowAnimals={setShowAnimals}
+          />
         </div>
         <div className="map-wrapper">
-          <Map setSidebarContent={setSidebarContent} setShowNews={setShowNews} setSidebarAnimals={setSidebarAnimals} showAnimals={showAnimals} setShowAnimals={setShowAnimals}/>
+          <Map 
+            setSidebarContent={setSidebarContent} 
+            setSidebarAnimals={setSidebarAnimals} 
+            setSidebarCountry={setSidebarCountry}
+            setPageSwitch={setPageSwitch}
+            setSelectedArea={setSelectedArea}
+            groupSelection={groupSelection}
+            statusSelection={statusSelection}
+            sidebarCountry={sidebarCountry}
+            setShowNews={setShowNews}
+            showAnimals={showAnimals}
+            setShowAnimals={setShowAnimals}
+          />
         </div>
       </div>
     </div>
