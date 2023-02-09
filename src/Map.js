@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { ComposableMap, Geographies, Geography, Annotation, ZoomableGroup, Marker} from "react-simple-maps";
+import { ComposableMap, Geographies, Geography, ZoomableGroup} from "react-simple-maps";
 import { geoPatterson } from "d3-geo-projection";
 import ApiClient from './api/ApiClient';
 import RedlistModel from './api/RedlistModel';
@@ -13,37 +13,37 @@ const projection = geoPatterson()
   .scale(128);
 
 
-const Map = ({setSidebarContent, setSidebarAnimals, setSidebarCountry, groupSelection, setButtonText, buttonText, statusSelection, sidebarCountry, setShowAnimals, setShowNews}) => {
+const Map = ({setSidebarContent, setSidebarAnimals, setSidebarCountry, groupSelection, setButtonText, buttonText, statusSelection, sidebarCountry, setShowAnimals, setShowNews, setLoadingAPI, setNoneFound}) => {
   const areaSwitchButton = useRef(null);
   const [geoURL, setGeoURL] = useState("https://raw.githubusercontent.com/deldersveld/topojson/master/world-continents.json");
   const [_, setSelectedArea] = useState();
-  const redlist = new RedlistModel();
+  const redlist = new RedlistModel(setLoadingAPI, setNoneFound);
   const [iso, setIso] = useState()
-
-  //redlist.listOfGroups(setGroupList)
   
-
   const handleClick = (geo) => () => {
     const selectedArea = areaSwitchButton.current.textContent
     const countryOrContinent = selectedArea === 'Continents' ? geo.properties.name : geo.properties.continent
     const client = new ApiClient();
-    const redlist = new RedlistModel();
+    const redlist = new RedlistModel(setLoadingAPI, setNoneFound);
     setIso(geo.properties["Alpha-2"])
+    if (selectedArea === 'Continents') setLoadingAPI(true)
+    setNoneFound(false)
+    setSidebarCountry()
 
     setSelectedArea(countryOrContinent);
-    console.log(selectedArea)
     setSidebarContent(countryOrContinent);
     setShowAnimals(true);
     setShowNews(false);
 
     selectedArea !== 'Continents'
       ? client.fetchAnimalsBySelectedArea(countryOrContinent, setSidebarAnimals)
-      : redlist.test(geo.properties["Alpha-2"], groupSelection, statusSelection, setSidebarCountry, sidebarCountry)
+      : redlist.findAnimals(geo.properties["Alpha-2"], groupSelection, statusSelection, setSidebarCountry, sidebarCountry, setLoadingAPI)
   };
 
-  useEffect(() => {
-    redlist.test(iso, groupSelection, statusSelection, setSidebarCountry, sidebarCountry)
+  useEffect((selectedArea) => {
+    redlist.findAnimals(iso, groupSelection, statusSelection, setSidebarCountry, sidebarCountry, setLoadingAPI)
   }, [groupSelection, statusSelection])
+
 
   useEffect(()=> {
   }, [sidebarCountry])
@@ -54,6 +54,8 @@ const Map = ({setSidebarContent, setSidebarAnimals, setSidebarCountry, groupSele
       setGeoURL("https://raw.githubusercontent.com/deldersveld/topojson/master/world-continents.json");
       setSidebarContent()
       setSidebarCountry()
+      setLoadingAPI(false)
+      setNoneFound(false)
     } else {
       setButtonText('Continents');
       setGeoURL("https://raw.githubusercontent.com/lotusms/world-map-data/main/world.json");
