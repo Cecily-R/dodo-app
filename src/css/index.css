@@ -219,6 +219,14 @@ a:hover {
   padding: 10;
 }
 
+#loadingMs {
+  text-align: center;
+  font-style: italic;
+}
+#noSearchMatchesMs {
+  text-align: center;
+}
+
 .statusDropdown {
   background-color: #66999b;
   color: white;

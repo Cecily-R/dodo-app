@@ -52,8 +52,8 @@ const Sidebar = ({noneFound, loadingAPI, sidebarContent, sidebarAnimals, sidebar
     <>
 
     <h2>{sidebarContent}</h2>
-    {loadingAPI && <p>Loading...</p>}
-    {noneFound && <p>No species match your criteria</p>}
+    {loadingAPI && <p id='loadingMs'>Loading...</p>}
+    {noneFound && <p id='noSearchMatchesMs'>No species match your criteria.</p>}
 
     {sidebarAnimals !== undefined && showAnimals === true
      ? sidebarAnimals.result.sort().map((animal, i) => {return <Animal key={i} animal={animal}/>})
