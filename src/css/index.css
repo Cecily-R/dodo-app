@@ -28,7 +28,7 @@ h1 {
 h2 {
   text-align: center;
   color: white;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .navbar .breakingNewsButton {
@@ -181,14 +181,20 @@ header .navbar {
 a:link {
   color: #12126d; 
   text-decoration: none;
+  
 }
 
 a:visited {
-  color: #12126d; 
+  color: #3c3c6b; 
   text-decoration: none;
 }
 
 a:hover {
+  color: white; 
+  text-decoration: none;
+}
+
+a:active {
   color: #12126d; 
   text-decoration: underline;
 }

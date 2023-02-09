@@ -58,7 +58,7 @@ const Sidebar = ({sidebarContent, sidebarAnimals, sidebarCountry, buttonText, se
       : null}
     {showNews ? <News />: null}
     {sidebarCountry !== undefined && showAnimals === true
-      ? sidebarCountry.map((animal) => {return (<p>{animal.result[0].main_common_name}</p>)})
+      ? sidebarCountry.map((animal) => {return (<h3>{animal.result[0].main_common_name}</h3>)})
       : <p></p>}
     <p>{buttonText === 'Continents' && groupDropdown}</p>
     <p>{buttonText === 'Continents' && statusDropdown}</p>
