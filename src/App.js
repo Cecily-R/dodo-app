@@ -15,6 +15,8 @@ function App() {
   const [buttonText, setButtonText] = useState('Countries');
   const [showNews, setShowNews] = useState(false);
   const [showAnimals, setShowAnimals] = useState(false);
+  const [loadingAPI, setLoadingAPI] = useState(false)
+  const [noneFound, setNoneFound] = useState(false)
 
   return (
     <>
@@ -36,6 +38,8 @@ function App() {
             showNews={showNews}
             showAnimals={showAnimals}
             setShowAnimals={setShowAnimals}
+            loadingAPI={loadingAPI}
+            noneFound={noneFound}
           />
         </div>
         <div className="map-wrapper">
@@ -44,6 +48,7 @@ function App() {
             setSidebarAnimals={setSidebarAnimals} 
             setSidebarCountry={setSidebarCountry}
             setButtonText={setButtonText}
+            setLoadingAPI={setLoadingAPI}
             buttonText={buttonText}
             groupSelection={groupSelection}
             statusSelection={statusSelection}
@@ -51,6 +56,7 @@ function App() {
             setShowNews={setShowNews}
             showAnimals={showAnimals}
             setShowAnimals={setShowAnimals}
+            setNoneFound={setNoneFound}
           />
         </div>
       </div>

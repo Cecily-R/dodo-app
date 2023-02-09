@@ -2,12 +2,15 @@ import RedlistClient from './RedlistClient'
 import {setState} from 'react'
 
 class RedlistModel {
-  constructor() {
+  constructor(setLoadingAPI, setNoneFound, buttonText) {
     this.client = new RedlistClient()
     this.filteredCountryList = []
     this.groupList = []
     this.finalList = []
     this.speciesInfoList = []
+    this.setLoadingAPI = setLoadingAPI
+    this.setNoneFound = setNoneFound
+    this.buttonText = buttonText
     //const [filteredCountry, setFilteredCountry] = setState()
   }
 
@@ -22,16 +25,14 @@ class RedlistModel {
 
   speciesByGroup(group) {
     let promise = this.client.fetchSpeciesByGroup(group, (data) => {
-      console.log(group)
       data.result.forEach(animal => {
         this.groupList.push(animal.scientific_name)
       })
-      console.log(this.groupList)
     })
     return promise
   }
 
-  filteredSpecies(iso, group, status) {
+  filteredSpecies(iso, group, status, setLoadingAPI) {
     let promiseOne = this.speciesByCountry(iso, group, status)
     let promiseTwo = this.speciesByGroup(group)
       .then(() => {
@@ -51,8 +52,11 @@ class RedlistModel {
     return promise
   }
 
-  test(iso, group, status, setSidebarCountry, sidebarCountry) {
-    let promise = this.filteredSpecies(iso, group, status)
+  findAnimals(iso, group, status, setSidebarCountry, setLoadingAPI) {
+    if (this.buttonText === "Continents") this.setLoadingAPI(true) 
+    this.setNoneFound(false)
+    setSidebarCountry()
+    let promise = this.filteredSpecies(iso, group, status, setLoadingAPI)
     promise
       .then(() => {
         let allPromises = this.finalList.map(animal => this.speciesInfo(animal, setSidebarCountry))
@@ -60,6 +64,8 @@ class RedlistModel {
       })
       .then((allPromises) => {
         setSidebarCountry(allPromises)
+        this.setLoadingAPI(false)
+        if (allPromises.length === 0 && iso !== undefined) this.setNoneFound(true)
       })
   }
 }
