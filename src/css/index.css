@@ -145,7 +145,7 @@ header .navbar {
   width: 80%;
   fill:#0e652b;
   position: relative;
-  cursor: url(newMouse.png), auto;
+  cursor: url(dodo_cursor.png), auto;
   outline: none;
 }
 

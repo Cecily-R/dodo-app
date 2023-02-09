@@ -31,6 +31,7 @@ const Map = ({setSidebarContent, setSidebarAnimals, setSidebarCountry, groupSele
     setIso(geo.properties["Alpha-2"])
 
     setSelectedArea(countryOrContinent);
+    console.log(selectedArea)
     setSidebarContent(countryOrContinent);
     setShowAnimals(true);
     setShowNews(false);
@@ -63,7 +64,7 @@ const Map = ({setSidebarContent, setSidebarAnimals, setSidebarCountry, groupSele
 
   return (
     <div className="Map">
-    <button id="countryOrContinentButton" onClick={handleCountryClick} ref={areaSwitchButton}>{buttonText || 'Continents'}</button>     
+    <button id="countryOrContinentButton" onClick={handleCountryClick} ref={areaSwitchButton}>{buttonText}</button>     
       <ComposableMap width={width} height={height} projection={projection} position="relative" >
       <ZoomableGroup translateExtent={[[0, 0], [width, height]]}>
             <Geographies geography={geoURL}>
