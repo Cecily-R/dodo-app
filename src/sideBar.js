@@ -54,7 +54,7 @@ const Sidebar = ({sidebarContent, sidebarAnimals, sidebarCountry, buttonText, se
     <>
     <p>{sidebarContent}</p>
     {sidebarAnimals !== undefined && showAnimals === true
-      ? sidebarAnimals.result.map((animal) => {return (<p>{animal.common_name}</p>)}) 
+     ? sidebarAnimals.result.sort().map((animal, i) => {return <Animal key={i} animal={animal}/>})
       : null}
     {showNews ? <News />: null}
     {sidebarCountry !== undefined 
