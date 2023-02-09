@@ -50,9 +50,11 @@ const Sidebar = ({noneFound, loadingAPI, sidebarContent, sidebarAnimals, sidebar
 
   return (
     <>
+
     <p>{sidebarContent}</p>
     {loadingAPI && <h2>Loading...</h2>}
     {noneFound && <h2>No species match your criteria</h2>}
+
     {sidebarAnimals !== undefined && showAnimals === true
      ? sidebarAnimals.result.sort().map((animal, i) => {return <Animal key={i} animal={animal}/>})
       : null}
