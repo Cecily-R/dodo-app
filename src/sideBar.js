@@ -23,7 +23,7 @@ const Sidebar = ({noneFound, loadingAPI, sidebarContent, sidebarAnimals, sidebar
   }
 
   const groupDropdown =
-    <select onChange={handleGroupChange}>
+    <select className="typeDropdown"onChange={handleGroupChange}>
       {groupList.sort().map(group => {
         return (
           <option value={group}> 
@@ -36,7 +36,7 @@ const Sidebar = ({noneFound, loadingAPI, sidebarContent, sidebarAnimals, sidebar
     </select>
 
   const statusDropdown =
-    <select onChange={handleStatusChange}>
+    <select className="statusDropdown" onChange={handleStatusChange}>
       {statusList.reverse().map(status => {
         return (
           <option value={status}> 
@@ -61,9 +61,10 @@ const Sidebar = ({noneFound, loadingAPI, sidebarContent, sidebarAnimals, sidebar
     {showNews ? <News />: null}
     {sidebarCountry !== undefined && showAnimals === true
       ? sidebarCountry.map((animal) => {return (<p>{animal.result[0].main_common_name}</p>)})
-      : <p></p>}
-    <p>{buttonText === 'Continents' && showNews === false && groupDropdown}</p>
-    <p>{buttonText === 'Continents' && showNews === false && statusDropdown}</p>
+      : <p></p>}.
+    <h3 className='animalTypeDropdown'>{buttonText === 'Continents' && groupDropdown}</h3>
+    <h3 className="animalStatusDropdown">{buttonText === 'Continents' && statusDropdown}</h3>
+
     </>
   )}
  
