@@ -313,7 +313,8 @@ a:active {
   transform: translateY(-50%);
 }
 
-.animalInfo img {
+#animalInfo img {
   border-color: white;
+  border:#d6eed1;
   border: 10px;
 }
