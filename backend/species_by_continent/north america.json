@@ -5,7 +5,7 @@
   "common_name": "Red Wolf",
   "subpopulation": "21",
   "habitat": "Forest / Wetlands",
-  "image": "https://drive.google.com/uc?export=download&id=18z34GtcH3rBgF5Homc6-Y0vXO9F7Qs-E"
+  "image": "na_id_01.jpg"
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "common_name": "Ocelot",
     "subpopulation": "35",
     "habitat": "Rainforest",
-    "image": "https://drive.google.com/uc?export=download&id=1wJAoCbfa8ZG8JWe_weBjw_MJcrAwgsZH"
+    "image": "na_id_02.jpg"
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "common_name": "Burrowing Owl",
     "subpopulation": "10000",
     "habitat": "Grassland / Desert",
-    "image": "https://drive.google.com/uc?export=download&id=1LlgeGrU4os4IKgA2DG7zU-bADfXgnviF"
+    "image": "na_id_03.jpg"
   },
   {
     "id": 4,
@@ -29,7 +29,7 @@
     "common_name": "Florida Manatee",
     "subpopulation": "7500",
     "habitat": "River",
-    "image": "https://drive.google.com/uc?export=download&id=1HRX3jt59PCR3RvpyXkTUEnajrmlXe9GM"
+    "image": "na_id_04.jpg"
   },
   {
     "id": 5,
@@ -37,7 +37,7 @@
     "common_name": "California Condor",
     "subpopulation": "336",
     "habitat": "Desert",
-    "image": "https://drive.google.com/uc?export=download&id=194O4AQ1OmO5dPHFS_xqV5heEkPXnexFT"
+    "image": "na_id_05.jpg"
   },
   {
     "id": 6,
@@ -45,7 +45,7 @@
     "common_name": "Cougar",
     "subpopulation": "20000",
     "habitat": "Mountain",
-    "image": "https://drive.google.com/uc?export=download&id=1A16KGcyx980pnJ6vyMWqI2lYfs1kwJDy"
+    "image": "na_id_06.jpg"
   },
   {
     "id": 7,
@@ -53,7 +53,7 @@
     "common_name": "Island Fox",
     "subpopulation": "2300",
     "habitat": "Grassland",
-    "image": "https://drive.google.com/uc?export=download&id=1Xmm-sASSUcGzzff4IDlaQvqkdk_Zd2Cb"
+    "image": "na_id_07.jpg"
   },
 
   {
@@ -62,7 +62,7 @@
     "common_name": "Northern Swift Fox",
     "subpopulation": "870",
     "habitat": "Shortgrass Prairie",
-    "image": "https://drive.google.com/uc?export=download&id=1V4UuGI5slTFLkAGha6pLadPHIvDm4r8u"
+    "image": "na_id_08.jpg"
   },
   {
     "id": 9,
@@ -70,7 +70,7 @@
     "common_name": "Sea Otter",
     "subpopulation": "3000",
     "habitat": "Coastline / Kelp Forests",
-    "image": "https://drive.google.com/uc?export=download&id=1Vq2psRt10ECtiQ7pQPmtZydcvUHhA8pd"
+    "image": "na_id_09.jpg"
   },
   {
     "id": 10,
@@ -78,6 +78,6 @@
     "common_name": "Vancouver Island Marmot",
     "subpopulation": "250",
     "habitat": "Subalpine Meadows",
-    "image": "https://drive.google.com/uc?export=download&id=14WmUSa4xKVmoGS0l8yjjwXlceL1GPBkg"
+    "image": "na_id_10.jpg"
   }  
 ]}
