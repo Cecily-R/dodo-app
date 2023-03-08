@@ -63,8 +63,8 @@ const Map = ({setSidebarContent, setSidebarAnimals, setSidebarCountry, groupSele
       setSidebarContent()
       setSidebarAnimals()
       setShowNews(false);
-    };
-  };
+    }
+  }
 
   return (
     <div className="Map">
