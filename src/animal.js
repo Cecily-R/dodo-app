@@ -15,7 +15,7 @@ const Animal = (animal) => {
       <p>{animal.animal.scientific_name}</p>
       <p>Subpopulation: <b>{animal.animal.subpopulation}</b></p>
       <p>Habitat: <b>{animal.animal.habitat}</b></p>
-      
+      <p><img src={ animal.animal.image } alt={animal.animal.common_name} border="2px" width="150" height="150" /></p>
     </div>
   );
 };
