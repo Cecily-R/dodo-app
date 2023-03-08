@@ -7,7 +7,7 @@ const Navbar = (props) => {
     props.setShowAnimals(false)
     props.setSidebarContent('Breaking News')
     if (props.showNews === true) props.setSidebarContent()
-  };
+  }
 
   return (
     <header>

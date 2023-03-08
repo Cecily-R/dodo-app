@@ -31,4 +31,5 @@ class RedListClient {
   }
 }
 
-module.exports = RedListClient;
+
+export default RedListClient;
