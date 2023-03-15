@@ -5,7 +5,7 @@ const News = () => {
   const [news, setNews] = useState(null);
   const [isLoading, setIsLoading] = useState(false) 
   const date = new Date().toISOString().split('T')[0]
-  const apiKey = 'da86dadbff91415699979cdc79e21197';
+  const apiKey = process.env.REACT_APP_NEWS_API_KEY;
 
   const newsApiURL = 'https://newsapi.org/v2/everything?q=animal conservation&from' + `${date}` + '&sortBy=popularity&apiKey=' + `${apiKey}`
   useEffect(() => {
