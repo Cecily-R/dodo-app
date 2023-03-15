@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 const NewsStory = (props) => {
   const story = props.story;

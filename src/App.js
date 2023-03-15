@@ -3,7 +3,7 @@ import Map from './Map.js';
 import Navbar from './navBar.js';
 import Sidebar from './sideBar.js'
 import Footer from './footer.js';
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 
 
 function App() {

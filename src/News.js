@@ -7,7 +7,7 @@ const News = () => {
   const date = new Date().toISOString().split('T')[0]
   const apiKey = process.env.REACT_APP_NEWS_API_KEY;
 
-  const newsApiURL = 'https://newsapi.org/v2/everything?q=animal conservation&from' + `${date}` + '&sortBy=popularity&apiKey=' + `${apiKey}`
+  const newsApiURL = 'https://newsapi.org/v2/everything?q=animal conservation&from' + '2023.03.15' + '&sortBy=popularity&apiKey=' + `${apiKey}`
   useEffect(() => {
     fetchNews()
   }, []);

@@ -1,5 +1,4 @@
 
-import {useEffect} from 'react'
 import News from './News'
 import Animal from './animal'
 import Loader from 'react-dots-loader'
